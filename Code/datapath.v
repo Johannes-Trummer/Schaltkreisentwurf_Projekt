@@ -3,6 +3,8 @@ module datapath (
     input           rst,
     input           clk,
 
+    input           start_i,
+
     input   [15:0]  Zahl1_i, Zahl2_i,
 
     input   [2:0]   alu_mode_i,
@@ -17,39 +19,110 @@ module datapath (
 //===Register-Transfer===
     input Zahl1_to_alu_a,
     input Zahl2_to_alu_b,
-    input erg_modulo_to_alu_a,
 
-    input check_for_termination_i
+    input check_for_termination_i,
+
+    output wire valid_o,
+    output wire [15:0]  ergebnis
 );
 
+    //===Interne Busse==========================
+    reg signed [15:0] 	alu_a_temp, alu_b_temp;
+    wire signed [15:0]  wbb;
+
+    //===ALU Ausgangsregister alu_c_r===========
+    reg 	signed [15:0] alu_c_r;
+    wire 	signed [15:0] alu_c;
 
     //===Variablenregister=======================
     reg     [15:0]  Zahl1_r, Zahl2_r;
-    
-
+    reg     [15:0]  erg_modulo_temp, erg_modulo_r, erg_zuvor_temp, erg_zuvor_r;
+    reg     [15:0]  zwischen_gross_temp, zwischen_gross_r, zwischen_klein_temp, zwischen_klein_r;
+    reg             start_r;           
 
     //===ALU-Instanziierung====================
 
     alu alu(
-
-
+        .rst(rst),
+        .clk(clk),
+        .alu_mode_i(alu_mode_i),
+        .op_a_i(alu_a_temp),
+        .op_b_i(alu_b_temp),
+        .res_o(alu_c),
     );
 
 
     always @(posedge clk) begin
         if (rst) begin
-            Zahl1_r     <= 'd0;
-            Zahl2_r     <= 'd0;
+            Zahl1_r             <= 'd0;
+            Zahl2_r             <= 'd0;
+            erg_modulo_r        <= 'd0;
+            erg_zuvor_r         <= 'd0;
+            zwischen_gross_r    <= 'd0;
+            zwischen_klein_r    <= 'd0;
+            alu_c_r             <= 'd0;
         end else begin
-            Zahl1_r     <= Zahl1_i;
-            Zahl2_r     <= Zahl2_i;
+            Zahl1_r             <= Zahl1_i;
+            Zahl2_r             <= Zahl2_i;
+            erg_modulo_r        <= erg_modulo_temp;
+            erg_zuvor_r         <= erg_zuvor_temp;
+            zwischen_gross_r    <= zwischen_gross_temp;
+            zwischen_klein_r    <= zwischen_klein_temp;
+            alu_c_r             <= alu_c;
         end     
     
     end
 
 
     always @(*) begin
-        
+
+        alu_a_temp 			= 'd0;
+	    alu_b_temp 			= 'd0;
+
+        erg_modulo_temp     = erg_modulo_r;
+        erg_zuvor_temp      = erg_zuvor_r;
+        zwischen_gross_temp = zwischen_gross_r;
+        zwischen_klein_temp = zwischen_klein_r;
+
+        if (start_r) begin
+            
+        end
+
+        //===Write-Back-Logic==========
+        if (wren_zw_gross) begin
+            zwischen_gross_temp = wbb;
+        end
+
+        if (wren_zw_klein) begin
+            zwischen_klein_temp = wbb;
+        end
+
+        if (wren_zw_in_zahlen) begin
+            Zahl1_r = zwischen_gross_r;
+            Zahl2_r = zwischen_klein_r;
+        end
+
+        if (wren_erg_modulo) begin
+            erg_modulo_temp = wbb;
+        end
+
+        if (wren_to_new_numbers) begin
+            Zahl1_r = Zahl2_r;
+            Zahl2_r = erg_modulo_r;
+            erg_zuvor_r = erg_modulo_r;
+        end
+
+        //===Register-Transfer-Logic===
+        if (Zahl1_to_alu_a) begin
+            alu_a_temp = Zahl1_r;
+        end
+        else if (Zahl2_to_alu_b) begin
+            alu_b_temp = Zahl2_r;
+        end
+    
     end
     
+    assign wbb      = alu_c_r;
+    assign valid_o  = check_for_termination_i & (erg_modulo_r == 'd0)
+    //assign ergebnis = ...
 endmodule

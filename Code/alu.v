@@ -1,10 +1,11 @@
 module alu (
-    input       [2:0]     alu_mode_i,
+    input                   rst, clk, 
+    input       [2:0]       alu_mode_i,
 
-    input       [15:0]    op_a_i,
-    input       [15:0]    op_b_i,
+    input       [15:0]      op_a_i,
+    input       [15:0]      op_b_i,
 
-    output reg  [15:0]   res_o,
+    output reg  [15:0]      res_o,
 );
 
 

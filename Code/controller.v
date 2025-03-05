@@ -17,7 +17,6 @@ module controller(
 //===Register-Transfer===
     output reg Zahl1_to_alu_a,
     output reg Zahl2_to_alu_b,
-    output reg erg_modulo_to_alu_a,
 
     output reg check_for_termination_o
 

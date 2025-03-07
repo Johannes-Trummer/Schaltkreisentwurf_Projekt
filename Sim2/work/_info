@@ -1,0 +1,264 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo/sim
+valu
+Z0 !s110 1741339184
+!i10b 1
+!s100 bF=2fd>]QF>gPE^=Gj1kD2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IB8i]lNaCDIGTlPal?ck5W1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Sim2
+w1741276618
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu.v
+!i122 242
+L0 1 74
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1741339184.000000
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+valu_modulo
+R0
+!i10b 1
+!s100 53c>BhoinTXZ^[[8Mf04;0
+R1
+IXT<>1kU2S28`kk[[X_Oa;0
+R2
+R3
+w1741274162
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu_modulo.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu_modulo.v
+!i122 243
+L0 1 40
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu_modulo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu_modulo.v|
+!i113 1
+R6
+R7
+vcontroller
+R0
+!i10b 1
+!s100 n9hQ5gEaRIlcS]e4IH;;W0
+R1
+I_ehACC^B_2;cZX9k[2S462
+R2
+R3
+w1741276684
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v
+!i122 244
+L0 1 190
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v|
+!i113 1
+R6
+R7
+vcontroller_modulo
+R0
+!i10b 1
+!s100 VeCaNKia<95BEB?L[QZTS1
+R1
+IbVU76>cTckO^5odm[?baZ1
+R2
+R3
+w1741333926
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller_modulo.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller_modulo.v
+!i122 245
+L0 1 138
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller_modulo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller_modulo.v|
+!i113 1
+R6
+R7
+vdatapath
+Z8 !s110 1741339185
+!i10b 1
+!s100 W=<E3Ao`PF92Q4I85YfhY2
+R1
+IVn0gd_<El>^l^el9K0m2[1
+R2
+R3
+w1741338913
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v
+!i122 246
+L0 1 148
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v|
+!i113 1
+R6
+R7
+vdatapath_modulo
+R8
+!i10b 1
+!s100 jSl8PhcaG8M2VT91G43CF1
+R1
+I2?aM]b`F_MYVoA<kK8?LL1
+R2
+R3
+w1741333769
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v
+!i122 247
+L0 1 129
+R4
+r1
+!s85 0
+31
+Z9 !s108 1741339185.000000
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v|
+!i113 1
+R6
+R7
+vmodulo
+R8
+!i10b 1
+!s100 PceHNbjG@daM`?M:5?LUo1
+R1
+IN91I6a`8oTMQL?LgPU7jK3
+R2
+R3
+w1741259537
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo.v
+!i122 248
+L0 1 98
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo.v|
+!i113 1
+R6
+R7
+vmodulo_top
+R8
+!i10b 1
+!s100 Yzg1Z=;@J;?_U1K<?629i1
+R1
+I_JNW01L8hU9IL^m=G?AMa1
+R2
+R3
+w1741333720
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v
+!i122 249
+L0 1 69
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v|
+!i113 1
+R6
+R7
+vtestbench
+R8
+!i10b 1
+!s100 T5@8C6oG>ZB]Ybz@d?LVi1
+R1
+I^k9<FGDG[K>QQ2mjI]Cfa2
+R2
+R3
+w1741339180
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v
+!i122 250
+L0 1 46
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v|
+!i113 1
+R6
+R7
+vtestbench_modulo
+R8
+!i10b 1
+!s100 kPM`RIe`85mU1AAfa008U3
+R1
+IO<E69;<@;HZZ=zbo?i_NS1
+R2
+R3
+w1741292106
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench_modulo.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench_modulo.v
+!i122 251
+L0 1 38
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench_modulo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench_modulo.v|
+!i113 1
+R6
+R7
+vtop
+R8
+!i10b 1
+!s100 a;a=5UjE?f?Z9Cg69XD`Q0
+R1
+Io8dm:DTNmKjV8AoKP80LD2
+R2
+R3
+w1741253820
+8C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/top.v
+FC:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/top.v
+!i122 252
+L0 1 86
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/top.v|
+!i113 1
+R6
+R7

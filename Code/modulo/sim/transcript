@@ -1,0 +1,97 @@
+# Compile of testbench_modulo.v was successful.
+# 1 compiles, 4 failed with no errors.
+# Compile of alu_modulo.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo_top.v was successful.
+# Compile of testbench_modulo.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of alu_modulo.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo_top.v was successful.
+# Compile of testbench_modulo.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.testbench_modulo
+# vsim -gui work.testbench_modulo 
+# Start time: 09:40:28 on Mar 07,2025
+# Loading work.testbench_modulo
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+add wave -position end sim:/testbench_modulo/*
+run
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Compile of alu_modulo.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo_top.v was successful.
+# Compile of testbench_modulo.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench_modulo
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Compile of alu_modulo.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo_top.v was successful.
+# Compile of testbench_modulo.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench_modulo
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# End time: 10:15:25 on Mar 07,2025, Elapsed time: 0:34:57
+# Errors: 0, Warnings: 1
+# Closing project C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo/sim/Module_sim.mpf

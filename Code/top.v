@@ -1,23 +1,31 @@
 module top (
 
-    input clk, rst, start_i,
+    input                   clk, rst, start_i,
 
-    input   [15:0]  Zahl1_i, Zahl2_i,
+    input       [15:0]      Zahl1_i, Zahl2_i,
 
-    output  [15:0]  ergebnis
+    output reg  [15:0]      ergebnis,
+
+    output reg              valid
     
 );
 
-    wire valid, alu_mode;
+    
+    wire        [2:0]       alu_mode;
+    wire        [15:0]      erg;
+
+    //===Modulo-Flags===
+    wire modulo_ready, modulo_start;
 
     //===Write-Back-Flags===
-    wire wren_zw_gross, wren_zw_klein, wren_zw_in_zahlen, wren_erg_modulo, wren_to_new_numbers;
+    wire wren_zw_gross, wren_zw_klein, wren_zw_in_zahlen, wren_erg_modulo, wren_Zahl, wren_to_new_numbers;
 
     //===Register Transfer===
-    wire Zahl1_to_alu_a, Zahl2_to_alu_b;
+    wire Zahl1_to_alu_a, Zahl2_to_alu_b, valid_w;
 
     //===Check for Termination===
     wire check_for_termination;
+
 
     controller controller(
 
@@ -31,10 +39,14 @@ module top (
         .wren_zw_klein(wren_zw_klein),
         .wren_zw_in_zahlen(wren_zw_in_zahlen),
         .wren_erg_modulo(wren_erg_modulo),
+        .wren_Zahl(wren_Zahl),
         .wren_to_new_numbers(wren_to_new_numbers),
 
         .Zahl1_to_alu_a(Zahl1_to_alu_a),
         .Zahl2_to_alu_b(Zahl2_to_alu_b),
+
+        .modulo_ready_i(modulo_ready),
+        .modulo_start_o(modulo_start),
         
         .check_for_termination_o(check_for_termination)
 
@@ -53,6 +65,7 @@ module top (
         .wren_zw_klein(wren_zw_klein),
         .wren_zw_in_zahlen(wren_zw_in_zahlen),
         .wren_erg_modulo(wren_erg_modulo),
+        .wren_Zahl(wren_Zahl),
         .wren_to_new_numbers(wren_to_new_numbers),
 
         .Zahl1_to_alu_a(Zahl1_to_alu_a),
@@ -60,10 +73,14 @@ module top (
     
         .check_for_termination_i(check_for_termination),
 
-        .valid_o(valid),
-        .ergebnis(ergebnis)
+        .modulo_ready_o(modulo_ready),
+        .modulo_start_i(modulo_start),
+
+        .valid_o(valid_w),
+        .ergebnis(erg)
 
     );
-
+assign ergebnis = erg;
+assign valid = valid_w;
 
 endmodule

@@ -1,4 +1,4 @@
-module top (
+module ggt_top (
 
     input                   clk, rst, start_i,
 

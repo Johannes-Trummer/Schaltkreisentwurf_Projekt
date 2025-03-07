@@ -14,7 +14,7 @@ module testbench(
     wire            valid;
 
 
-    top top(
+    ggt_top top(
         .clk(clk), 
         .rst(rst), 
         .start_i(start),

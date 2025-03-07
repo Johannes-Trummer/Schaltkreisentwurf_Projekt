@@ -625,3 +625,94 @@ run
 # Valid-Abfrage im Controller aktiv
 # Valid-Abfrage im Controller aktiv
 # Valid-Abfrage im Controller aktiv
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Berechnung abgeschlossen: 41365 (ggt) 23270 = [    5]
+# Berechnung abgeschlossen: 65339 (ggt) 14692 = [    5]
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Berechnung abgeschlossen: 42759 (ggt) 39649 = [    1]
+# Berechnung abgeschlossen: 25379 (ggt)  9319 = [    1]
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Berechnung abgeschlossen:  1648 (ggt) 27598 = [    2]
+# Berechnung abgeschlossen: 12066 (ggt) 47564 = [    2]
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Berechnung abgeschlossen: 24272 (ggt) 55152 = [   16]
+# Berechnung abgeschlossen: 48118 (ggt) 37423 = [   16]
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Berechnung abgeschlossen: 11591 (ggt) 62743 = [    1]
+# Berechnung abgeschlossen: 17388 (ggt) 60593 = [    1]
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Berechnung abgeschlossen: 14665 (ggt) 24482 = [    1]
+# Berechnung abgeschlossen:  5735 (ggt) 41951 = [    1]
+# Valid-Abfrage im Controller aktiv

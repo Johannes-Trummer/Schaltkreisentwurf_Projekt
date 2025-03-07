@@ -1,4 +1,4 @@
-/* module testbench;
+module testbench;
 
     reg [15:0] Zahl1;
     reg [15:0] Zahl2;
@@ -61,7 +61,7 @@
             wait (valid == 1'b1);
             
             // Ergebnis in Datei schreiben
-            $fwrite(file_out, "%d (ggt) %d = [%d]\n", Zahl1, Zahl2, ergebnis);
+            $fwrite(file_out, "%d\n", ergebnis);
             $display("Berechnung abgeschlossen: %d (ggt) %d = [%d]", Zahl1, Zahl2, ergebnis);
         end
 
@@ -74,8 +74,8 @@
     end
 
 endmodule
- */
 
+/* 
  module testbench(
     
 );
@@ -122,3 +122,4 @@ endmodule
 
     
 endmodule
+ */

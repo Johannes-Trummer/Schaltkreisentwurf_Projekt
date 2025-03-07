@@ -27,22 +27,22 @@ module controller(
 );
 
 //===Schritte================
-localparam find_bigger              = 5'b0;
-localparam find_smaller             = 5'd1;
-localparam write_both               = 5'd2;
-localparam write_zwischenspeicher   = 5'd3;
+localparam STATE_find_bigger              = 5'b0;
+localparam STATE_find_smaller             = 5'd1;
+localparam STATE_write_both               = 5'd2;
+localparam STATE_write_zwischenspeicher   = 5'd3;
 
-localparam calc                     = 5'd4; //iterative Schritte des Algorithmus
-localparam write_erg                = 5'd5;
-localparam check_if_zero            = 5'd6;
-localparam write_Zahl               = 5'd7;
-localparam write_numbers            = 5'd8;
-localparam IDLE                     = 5'd9;
+localparam STATE_calc                     = 5'd4; //iterative Schritte des Algorithmus
+localparam STATE_write_erg                = 5'd5;
+localparam STATE_check_if_zero            = 5'd6;
+localparam STATE_write_Zahl               = 5'd7;
+localparam STATE_write_numbers            = 5'd8;
+localparam STATE_IDLE                     = 5'd9;
 
 
 //===ALU_Kommandos============
-localparam give_back_bigger     = 3'd0;
-localparam give_back_smaller    = 3'd1;
+localparam ALU_give_back_bigger     = 3'd0;
+localparam ALU_give_back_smaller    = 3'd1;
 localparam ALU_modulo           = 3'd2;
 localparam ALU_IDLE             = 3'd3;
 
@@ -57,7 +57,7 @@ always @(posedge clk) begin
     if (rst) begin
         valid_r         <= 1'd0;
         start_r         <= 1'd0;
-        current_state   <= IDLE;
+        current_state   <= STATE_IDLE;
     end
     else begin
         valid_r         <= valid_i;
@@ -94,25 +94,25 @@ always @(*) begin
     case (current_state)
 
 
-        IDLE: begin
+        STATE_IDLE: begin
             if (start_r == 1'b1) begin
-                next_state = find_bigger;
+                next_state = STATE_find_bigger;
             end
         end    
 
 
-        find_bigger: begin              //1
-            next_state = find_smaller;
+        STATE_find_bigger: begin              //1
+            next_state = STATE_find_smaller;
 
             Zahl1_to_alu_a = 1'b1;
             Zahl2_to_alu_b = 1'b1;
 
-            alu_mode_o = give_back_bigger;
+            alu_mode_o = ALU_give_back_bigger;
         end
 
 
-        find_smaller: begin             //2
-            next_state = write_both;
+        STATE_find_smaller: begin             //2
+            next_state = STATE_write_both;
 
             Zahl1_to_alu_a = 1'b1;
             Zahl2_to_alu_b = 1'b1;
@@ -120,28 +120,28 @@ always @(*) begin
             wren_zw_gross = 1'b1;
             
 
-            alu_mode_o = give_back_smaller;
+            alu_mode_o = ALU_give_back_smaller;
         end
 
 
-        write_both: begin               //3
-            next_state = write_zwischenspeicher;
+        STATE_write_both: begin               //3
+            next_state = STATE_write_zwischenspeicher;
             wren_zw_klein = 1'b1;
             
         end
 
-        write_zwischenspeicher: begin
+        STATE_write_zwischenspeicher: begin
 
-            next_state = calc;
+            next_state = STATE_calc;
             wren_zw_in_zahlen = 1'b1;
         end
 
 
     
-        calc: begin                     //4
+        STATE_calc: begin                     //4
 
             if (modulo_ready_i == 1'b1) begin
-                next_state = write_erg;
+                next_state = STATE_write_erg;
             end
             
             Zahl1_to_alu_a = 1'b1;
@@ -151,24 +151,24 @@ always @(*) begin
             modulo_start_o = 1'd1;
         end
 
-        write_erg: begin            //5
-            next_state = check_if_zero;
+        STATE_write_erg: begin            //5
+            next_state = STATE_check_if_zero;
             wren_erg_modulo = 1'b1;
         end
 
-        check_if_zero: begin
+        STATE_check_if_zero: begin
 
-            next_state = write_Zahl;
+            next_state = STATE_write_Zahl;
             check_for_termination_o = 1'd1;
         end
 
-        write_Zahl: begin
-            next_state = write_numbers;
+        STATE_write_Zahl: begin
+            next_state = STATE_write_numbers;
             wren_Zahl = 1'b1;
         end
 
-        write_numbers: begin            //7
-            next_state = calc;
+        STATE_write_numbers: begin            //7
+            next_state = STATE_calc;
 
             wren_to_new_numbers = 1'b1;
         end
@@ -176,7 +176,7 @@ always @(*) begin
     endcase
 
     if (valid_i == 1'b1) begin
-        next_state = IDLE;
+        next_state = STATE_IDLE;
     end
 end
 

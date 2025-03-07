@@ -23,8 +23,8 @@ module datapath_modulo (
 
 
     input check_for_termination_i,
-    output wire [15:0]   ergebnis,
-    output wire          valid_o
+    output reg [15:0]   ergebnis,
+    output reg          valid_o
 );
 
     reg running = 'd0;
@@ -35,7 +35,7 @@ module datapath_modulo (
 
  //===ALU Ausgangsregister alu_c_r===========
     reg 	signed [15:0] alu_c_r;
-    wire signed [15:0] alu_c;
+    wire 	signed [15:0] alu_c;
 
 
 //===Variablenregister======================
@@ -59,16 +59,16 @@ always @(posedge clk) begin
     if (rst) begin
         Zahl1_temp          <= 'd0;
         Zahl2_temp          <= 'd0;
-        //Zahl1_r             <= 'd0;
-        //Zahl2_r             <= 'd0;
+        Zahl1_r             <= 'd0;
+        Zahl2_r             <= 'd0;
 
-        //ergebnis_r          <= 'd0;
+        ergebnis_r          <= 'd0;
         termination_erg_r   <= 'd0;
     end else begin
         Zahl1_temp          <= Zahl1_i;
         Zahl2_temp          <= Zahl2_i;
 
-        //ergebnis_r          <= ergebnis_temp;
+        ergebnis_r          <= ergebnis_temp;
         termination_erg_r   <= termination_erg_temp;
 
         alu_c_r             <= alu_c;
@@ -79,8 +79,8 @@ end
 
 always @(*) begin
 
-		alu_a_temp 			= 'd0;
-		alu_b_temp 			= 'd0;
+    alu_a_temp 			= 'd0;
+	alu_b_temp 			= 'd0;
 
     ergebnis_temp           = ergebnis_r;
     termination_erg_temp    = termination_erg_r;

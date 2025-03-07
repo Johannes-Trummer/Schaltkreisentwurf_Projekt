@@ -4,9 +4,9 @@ module ggt_top (
 
     input       [15:0]      Zahl1_i, Zahl2_i,
 
-    output wire  [15:0]      ergebnis,
+    output reg  [15:0]      ergebnis,
 
-    output wire              valid
+    output reg              valid
     
 );
 

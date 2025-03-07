@@ -1,0 +1,24 @@
+
+State Machine - |ggt_top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state
+Name current_state.STATE_update current_state.STATE_write current_state.STATE_diff current_state.STATE_check_term current_state.STATE_write_comp current_state.STATE_compare current_state.STATE_write_init current_state.STATE_IDLE 
+current_state.STATE_IDLE 0 0 0 0 0 0 0 0 
+current_state.STATE_write_init 0 0 0 0 0 0 1 1 
+current_state.STATE_compare 0 0 0 0 0 1 0 1 
+current_state.STATE_write_comp 0 0 0 0 1 0 0 1 
+current_state.STATE_check_term 0 0 0 1 0 0 0 1 
+current_state.STATE_diff 0 0 1 0 0 0 0 1 
+current_state.STATE_write 0 1 0 0 0 0 0 1 
+current_state.STATE_update 1 0 0 0 0 0 0 1 
+
+State Machine - |ggt_top|controller:controller|current_state
+Name current_state.STATE_find_bigger current_state.STATE_write_numbers current_state.STATE_write_Zahl current_state.STATE_check_if_zero current_state.STATE_write_erg current_state.STATE_calc current_state.STATE_write_zwischenspeicher current_state.STATE_write_both current_state.STATE_find_smaller current_state.STATE_IDLE 
+current_state.STATE_IDLE 0 0 0 0 0 0 0 0 0 0 
+current_state.STATE_find_smaller 0 0 0 0 0 0 0 0 1 1 
+current_state.STATE_write_both 0 0 0 0 0 0 0 1 0 1 
+current_state.STATE_write_zwischenspeicher 0 0 0 0 0 0 1 0 0 1 
+current_state.STATE_calc 0 0 0 0 0 1 0 0 0 1 
+current_state.STATE_write_erg 0 0 0 0 1 0 0 0 0 1 
+current_state.STATE_check_if_zero 0 0 0 1 0 0 0 0 0 1 
+current_state.STATE_write_Zahl 0 0 1 0 0 0 0 0 0 1 
+current_state.STATE_write_numbers 0 1 0 0 0 0 0 0 0 1 
+current_state.STATE_find_bigger 1 0 0 0 0 0 0 0 0 1 

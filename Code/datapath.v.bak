@@ -25,7 +25,7 @@ module datapath (
     input check_for_termination_i,
 
     output              valid_o,
-    output wire [15:0]  ergebnis,
+    output reg [15:0]   ergebnis,
     output              modulo_ready_o
 );
 
@@ -64,10 +64,10 @@ module datapath (
         if (rst) begin
             Zahl1_temp          <= 'd0;
             Zahl2_temp          <= 'd0;
-            //Zahl1_r             <= 'd0;
-            //Zahl2_r             <= 'd0;
+            Zahl1_r             <= 'd0;
+            Zahl2_r             <= 'd0;
             erg_modulo_r        <= 'd0;
-            //erg_zuvor_r         <= 'd0;
+            erg_zuvor_r         <= 'd0;
             zwischen_gross_r    <= 'd0;
             zwischen_klein_r    <= 'd0;
             alu_c_r             <= 'd0;
@@ -75,7 +75,7 @@ module datapath (
             Zahl1_temp          <= Zahl1_i;
             Zahl2_temp          <= Zahl2_i;
             erg_modulo_r        <= erg_modulo_temp;
-            //erg_zuvor_r         <= erg_zuvor_temp;
+            erg_zuvor_r         <= erg_zuvor_temp;
             zwischen_gross_r    <= zwischen_gross_temp;
             zwischen_klein_r    <= zwischen_klein_temp;
             alu_c_r             <= alu_c;
@@ -87,8 +87,8 @@ module datapath (
 
     always @(*) begin
 
-			alu_a_temp 			= 'd0;
-			alu_b_temp 			= 'd0;
+        alu_a_temp 			= 'd0;
+	    alu_b_temp 			= 'd0;
 
         erg_modulo_temp     = erg_modulo_r;
         erg_zuvor_temp      = erg_zuvor_r;

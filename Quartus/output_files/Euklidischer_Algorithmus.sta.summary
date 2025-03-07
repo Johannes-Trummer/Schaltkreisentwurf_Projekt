@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -9.191
+TNS   : -430.722
+
+Type  : Slow 1200mV 85C Model Setup 'controller:controller|current_state.STATE_find_smaller'
+Slack : -7.512
+TNS   : -256.260
+
+Type  : Slow 1200mV 85C Model Setup 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update'
+Slack : -1.705
+TNS   : -51.406
+
+Type  : Slow 1200mV 85C Model Setup 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init'
+Slack : -1.633
+TNS   : -23.056
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'controller:controller|current_state.STATE_find_smaller'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init'
+Slack : 0.636
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update'
+Slack : 0.946
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -229.024
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'controller:controller|current_state.STATE_find_smaller'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -8.531
+TNS   : -400.036
+
+Type  : Slow 1200mV 0C Model Setup 'controller:controller|current_state.STATE_find_smaller'
+Slack : -7.291
+TNS   : -244.771
+
+Type  : Slow 1200mV 0C Model Setup 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update'
+Slack : -1.623
+TNS   : -48.084
+
+Type  : Slow 1200mV 0C Model Setup 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init'
+Slack : -1.553
+TNS   : -21.403
+
+Type  : Slow 1200mV 0C Model Hold 'controller:controller|current_state.STATE_find_smaller'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.326
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init'
+Slack : 0.545
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update'
+Slack : 0.966
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -229.036
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'controller:controller|current_state.STATE_find_smaller'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -2.948
+TNS   : -126.223
+
+Type  : Fast 1200mV 0C Model Setup 'controller:controller|current_state.STATE_find_smaller'
+Slack : -2.692
+TNS   : -77.662
+
+Type  : Fast 1200mV 0C Model Setup 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update'
+Slack : -0.335
+TNS   : -10.068
+
+Type  : Fast 1200mV 0C Model Setup 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init'
+Slack : -0.004
+TNS   : -0.007
+
+Type  : Fast 1200mV 0C Model Hold 'controller:controller|current_state.STATE_find_smaller'
+Slack : 0.067
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update'
+Slack : 0.581
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -161.746
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'controller:controller|current_state.STATE_find_smaller'
+Slack : 0.332
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init'
+Slack : 0.410
+TNS   : 0.000
+
+------------------------------------------------------------

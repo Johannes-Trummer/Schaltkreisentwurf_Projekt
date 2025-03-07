@@ -6,7 +6,7 @@ module modulo_top (
 
 
     output valid_o,
-    output wire [15:0]   ergebnis_o
+    output reg [15:0]   ergebnis_o
 );
 
     wire [2:0] alu_mode;

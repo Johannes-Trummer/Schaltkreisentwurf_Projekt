@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Mar  7 16:12:59 2025
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : Euklidischer_Algorithmus
+Top-level Entity Name : ggt_top
+Family : MAX 10
+Total logic elements : 430
+    Total combinational functions : 397
+    Dedicated logic registers : 152
+Total registers : 152
+Total pins : 52
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

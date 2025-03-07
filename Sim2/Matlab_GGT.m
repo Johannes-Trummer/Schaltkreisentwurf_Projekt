@@ -1,5 +1,5 @@
 % Anzahl der zufälligen Zahlenpaare
-num_pairs = 500;
+num_pairs = 1000;
 max_value = 2^16 - 1; % Maximale 16-Bit-Zahl (65535)
 
 % Datei zum Speichern öffnen

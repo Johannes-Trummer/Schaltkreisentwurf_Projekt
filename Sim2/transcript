@@ -8,80 +8,11 @@
 # Compile of modulo_top.v was successful.
 # Compile of testbench.v was successful.
 # Compile of testbench_modulo.v was successful.
-# 10 compiles, 1 failed with no errors.
-# Compile of alu.v was successful.
-# Compile of alu_modulo.v was successful.
-# Compile of controller.v was successful.
-# Compile of controller_modulo.v was successful.
-# Compile of datapath.v was successful with warnings.
-# Compile of datapath_modulo.v was successful with warnings.
-# Compile of modulo.v was successful.
-# Compile of modulo_top.v was successful.
-# Compile of testbench.v was successful.
-# Compile of testbench_modulo.v was successful.
 # Compile of ggt_top.v was successful.
 # 11 compiles, 0 failed with no errors.
 vsim -gui work.testbench
 # vsim -gui work.testbench 
-# Start time: 10:25:34 on Mar 07,2025
-# Loading work.testbench
-# ** Error: (vsim-3033) Instantiation of 'ggt_top' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 17
-#         Searched libraries:
-#             C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Sim2/work
-# Error loading design
-# End time: 10:25:34 on Mar 07,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 5
-# Compile of alu.v was successful.
-# Compile of alu_modulo.v was successful.
-# Compile of controller.v was successful.
-# Compile of controller_modulo.v was successful.
-# Compile of datapath.v was successful with warnings.
-# Compile of datapath_modulo.v was successful with warnings.
-# Compile of modulo.v was successful.
-# Compile of modulo_top.v was successful.
-# Compile of testbench.v was successful.
-# Compile of testbench_modulo.v was successful.
-# Compile of ggt_top.v was successful.
-# 11 compiles, 0 failed with no errors.
-# Compile of alu.v was successful.
-# Compile of alu_modulo.v was successful.
-# Compile of controller.v was successful.
-# Compile of controller_modulo.v was successful.
-# Compile of datapath.v was successful with warnings.
-# Compile of datapath_modulo.v was successful with warnings.
-# Compile of modulo.v was successful.
-# Compile of modulo_top.v was successful.
-# Compile of testbench.v was successful.
-# Compile of testbench_modulo.v was successful.
-# Compile of ggt_top.v was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.testbench
-# vsim -gui work.testbench 
-# Start time: 10:26:33 on Mar 07,2025
-# Loading work.testbench
-# ** Error: (vsim-3033) Instantiation of 'ggt_top' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 17
-#         Searched libraries:
-#             C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Sim2/work
-# Error loading design
-# End time: 10:26:33 on Mar 07,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 3
-# Compile of alu.v was successful.
-# Compile of alu_modulo.v was successful.
-# Compile of controller.v was successful.
-# Compile of controller_modulo.v was successful.
-# Compile of datapath.v was successful with warnings.
-# Compile of datapath_modulo.v was successful with warnings.
-# Compile of modulo.v was successful.
-# Compile of modulo_top.v was successful.
-# Compile of testbench.v was successful.
-# Compile of testbench_modulo.v was successful.
-# Compile of ggt_top.v was successful.
-# 11 compiles, 0 failed with no errors.
-vsim -gui work.testbench
-# vsim -gui work.testbench 
-# Start time: 10:27:21 on Mar 07,2025
+# Start time: 16:31:16 on Mar 07,2025
 # Loading work.testbench
 # Loading work.ggt_top
 # Loading work.controller
@@ -91,12 +22,606 @@ vsim -gui work.testbench
 # Loading work.controller_modulo
 # Loading work.datapath_modulo
 # Loading work.alu_modulo
+# ** Error: (vsim-3043) Unresolved reference to 'break'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 53
+# Error loading design
+# End time: 16:31:16 on Mar 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 16:31:49 on Mar 07,2025
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+# ** Error: (vsim-3043) Unresolved reference to 'break'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 53
+# Error loading design
+# End time: 16:31:50 on Mar 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 16:32:06 on Mar 07,2025
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Note: $stop    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(41)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v line 41
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Note: $stop    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(41)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v line 41
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 10 ps  Iteration: 0  Process: /testbench/#INITIAL#29 File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 10 ps  Iteration: 0  Process: /testbench/#INITIAL#29 File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 50
+# Fehler: Konnte keine zwei Zahlen lesen!
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
 add wave -position end sim:/testbench/*
 run
 # Valid-Abfrage im Controller aktiv
 # Valid-Abfrage im Controller aktiv
 # Valid-Abfrage im Controller aktiv
 # Valid-Abfrage im Controller aktiv
-# End time: 10:27:52 on Mar 07,2025, Elapsed time: 0:00:31
-# Errors: 0, Warnings: 2
-# Closing project C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Sim2/Sim_gesamt.mpf
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 10 ps  Iteration: 0  Process: /testbench/#INITIAL#29 File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 10 ps  Iteration: 0  Process: /testbench/#INITIAL#29 File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 50
+# Fehler: Konnte keine zwei Zahlen lesen!
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 10 ps  Iteration: 0  Process: /testbench/#INITIAL#29 File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 10 ps  Iteration: 0  Process: /testbench/#INITIAL#29 File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 50
+# Fehler: Konnte keine zwei Zahlen lesen!
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Note: $stop    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(41)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v line 41
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Note: $stop    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(41)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v line 41
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Note: $stop    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(41)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v line 41
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Note: $stop    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(41)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v line 41
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Note: $stop    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(41)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v line 41
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Note: $stop    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(41)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v line 41
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "ggt_zahlen.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(36)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Fehler: Datei ggt_zahlen.txt konnte nicht geöffnet werden!
+# ** Note: $stop    : C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v(41)
+#    Time: 10 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v line 41
+# Break key hit
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+restart
+add wave -position end sim:/testbench/*
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/file_in'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/file_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/scan_result'. 
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# Compile of alu.v was successful.
+# Compile of alu_modulo.v was successful.
+# Compile of controller.v was successful.
+# Compile of controller_modulo.v was successful.
+# Compile of datapath.v was successful with warnings.
+# Compile of datapath_modulo.v was successful with warnings.
+# Compile of modulo.v was successful.
+# Compile of modulo_top.v was successful.
+# Compile of testbench.v was successful.
+# Compile of testbench_modulo.v was successful.
+# Compile of ggt_top.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.ggt_top
+# Loading work.controller
+# Loading work.datapath
+# Loading work.alu
+# Loading work.modulo_top
+# Loading work.controller_modulo
+# Loading work.datapath_modulo
+# Loading work.alu_modulo
+run
+# GetModuleFileName: Das angegebene Modul wurde nicht gefunden.
+# 
+# 
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv
+# Valid-Abfrage im Controller aktiv

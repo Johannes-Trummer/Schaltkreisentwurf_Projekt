@@ -75,7 +75,7 @@ module datapath (
             Zahl1_temp          <= Zahl1_i;
             Zahl2_temp          <= Zahl2_i;
             erg_modulo_r        <= erg_modulo_temp;
-            //erg_zuvor_r         <= erg_zuvor_temp;
+            erg_zuvor_r         <= erg_zuvor_temp;
             zwischen_gross_r    <= zwischen_gross_temp;
             zwischen_klein_r    <= zwischen_klein_temp;
             alu_c_r             <= alu_c;

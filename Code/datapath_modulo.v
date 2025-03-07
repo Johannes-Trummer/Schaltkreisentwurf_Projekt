@@ -68,7 +68,7 @@ always @(posedge clk) begin
         Zahl1_temp          <= Zahl1_i;
         Zahl2_temp          <= Zahl2_i;
 
-        //ergebnis_r          <= ergebnis_temp;
+        ergebnis_r          <= ergebnis_temp;
         termination_erg_r   <= termination_erg_temp;
 
         alu_c_r             <= alu_c;

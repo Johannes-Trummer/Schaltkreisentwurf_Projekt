@@ -118,21 +118,21 @@ always @(*) begin
             Zahl2_to_alu_b = 1'b1;
 
             wren_zw_gross = 1'b1;
-            
-
+        
             alu_mode_o = ALU_give_back_smaller;
         end
 
 
         STATE_write_both: begin               //3
             next_state = STATE_write_zwischenspeicher;
+
             wren_zw_klein = 1'b1;
             
         end
 
         STATE_write_zwischenspeicher: begin
-
             next_state = STATE_calc;
+
             wren_zw_in_zahlen = 1'b1;
         end
 
@@ -153,17 +153,19 @@ always @(*) begin
 
         STATE_write_erg: begin            //5
             next_state = STATE_check_if_zero;
+
             wren_erg_modulo = 1'b1;
         end
 
         STATE_check_if_zero: begin
-
             next_state = STATE_write_Zahl;
+
             check_for_termination_o = 1'd1;
         end
 
         STATE_write_Zahl: begin
             next_state = STATE_write_numbers;
+            
             wren_Zahl = 1'b1;
         end
 

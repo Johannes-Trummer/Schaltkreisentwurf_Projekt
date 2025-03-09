@@ -14,7 +14,13 @@ module testbench(
     wire valid;
 	 wire logic_clk;
 
-    // Datei-Handles (nur falls nicht SIMULATION definiert ist)
+    LEDM MEM1(
+		.address(),
+		.clock(),
+		.data(),
+		.wren(),
+		.q() 
+	 );
 
 
     ggt_top TOP(

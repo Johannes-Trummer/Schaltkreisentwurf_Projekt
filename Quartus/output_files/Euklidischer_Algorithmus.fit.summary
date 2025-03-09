@@ -1,17 +1,17 @@
-Fitter Status : Successful - Sun Mar  9 16:42:07 2025
+Fitter Status : Successful - Sun Mar  9 16:57:41 2025
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : Euklidischer_Algorithmus
 Top-level Entity Name : testbench
 Family : MAX 10
 Device : 10M08SAU169C8G
 Timing Models : Final
-Total logic elements : 1 / 8,064 ( < 1 % )
-    Total combinational functions : 1 / 8,064 ( < 1 % )
-    Dedicated logic registers : 0 / 8,064 ( 0 % )
-Total registers : 0
+Total logic elements : 229 / 8,064 ( 3 % )
+    Total combinational functions : 198 / 8,064 ( 2 % )
+    Dedicated logic registers : 133 / 8,064 ( 2 % )
+Total registers : 133
 Total pins : 1 / 130 ( < 1 % )
 Total virtual pins : 0
-Total memory bits : 0 / 387,072 ( 0 % )
+Total memory bits : 4,096 / 387,072 ( 1 % )
 Embedded Multiplier 9-bit elements : 0 / 48 ( 0 % )
 Total PLLs : 0 / 1 ( 0 % )
 UFM blocks : 0 / 1 ( 0 % )

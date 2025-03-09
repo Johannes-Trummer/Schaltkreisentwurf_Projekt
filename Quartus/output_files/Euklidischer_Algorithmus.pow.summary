@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Sat Mar  8 18:37:44 2025
+Power Analyzer Status : Successful - Sun Mar  9 08:14:15 2025
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : Euklidischer_Algorithmus
-Top-level Entity Name : ggt_top
+Top-level Entity Name : testbench
 Family : MAX 10
 Device : 10M16SAU169C8G
 Power Models : Final
-Total Thermal Power Dissipation : 220.61 mW
+Total Thermal Power Dissipation : 225.61 mW
 Core Dynamic Thermal Power Dissipation : 0.00 mW
-Core Static Thermal Power Dissipation : 215.59 mW
-I/O Thermal Power Dissipation : 5.02 mW
+Core Static Thermal Power Dissipation : 215.62 mW
+I/O Thermal Power Dissipation : 10.00 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data

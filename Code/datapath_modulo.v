@@ -99,7 +99,7 @@ always @(*) begin
     end
 
     else if (wren_Zahl1_to_erg) begin
-        ergebnis_r = Zahl1_r;
+        ergebnis_temp = Zahl1_r;
     end
 
     else if (wren_term_erg) begin

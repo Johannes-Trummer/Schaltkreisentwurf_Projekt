@@ -112,7 +112,7 @@ module datapath (
         else if (wren_zw_in_zahlen) begin
             Zahl1_r         = zwischen_gross_r;
             Zahl2_r         = zwischen_klein_r;
-            erg_zuvor_r     = zwischen_klein_r;
+            erg_zuvor_temp     = zwischen_klein_r;
         end
 
         else if (wren_erg_modulo) begin
@@ -126,7 +126,7 @@ module datapath (
         else if (wren_to_new_numbers) begin
             
             Zahl2_r = erg_modulo_r;
-            erg_zuvor_r = erg_modulo_r;
+            erg_zuvor_temp = erg_modulo_r;
 
         end
 

@@ -1,5 +1,5 @@
 Power Analyzer report for Euklidischer_Algorithmus
-Fri Mar  7 16:13:38 2025
+Sat Mar  8 18:37:44 2025
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -53,19 +53,19 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
+; Average used               ; 1.41        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   2.6%      ;
+;     Processors 2-4         ;  13.7%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                  ; Successful - Fri Mar  7 16:13:38 2025            ;
+; Power Analyzer Status                  ; Successful - Sat Mar  8 18:37:44 2025            ;
 ; Quartus Prime Version                  ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition      ;
 ; Revision Name                          ; Euklidischer_Algorithmus                         ;
 ; Top-level Entity Name                  ; ggt_top                                          ;
@@ -106,53 +106,51 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+---------------------------------------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Indeterminate Toggle Rates                                                                                                                    ;
-+-----------------------------------------------------------------------------------------------------------------+-----------------------------+
-; Node                                                                                                            ; Reason                      ;
-+-----------------------------------------------------------------------------------------------------------------+-----------------------------+
-; rst                                                                                                             ; No valid clock domain found ;
-; clk                                                                                                             ; No valid clock domain found ;
-; start_i                                                                                                         ; No valid clock domain found ;
-; Zahl2_i[0]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[0]                                                                                                      ; No valid clock domain found ;
-; Zahl2_i[15]                                                                                                     ; No valid clock domain found ;
-; Zahl1_i[15]                                                                                                     ; No valid clock domain found ;
-; Zahl2_i[14]                                                                                                     ; No valid clock domain found ;
-; Zahl1_i[14]                                                                                                     ; No valid clock domain found ;
-; Zahl2_i[13]                                                                                                     ; No valid clock domain found ;
-; Zahl1_i[13]                                                                                                     ; No valid clock domain found ;
-; Zahl2_i[12]                                                                                                     ; No valid clock domain found ;
-; Zahl1_i[12]                                                                                                     ; No valid clock domain found ;
-; Zahl2_i[11]                                                                                                     ; No valid clock domain found ;
-; Zahl1_i[11]                                                                                                     ; No valid clock domain found ;
-; Zahl2_i[10]                                                                                                     ; No valid clock domain found ;
-; Zahl1_i[10]                                                                                                     ; No valid clock domain found ;
-; Zahl2_i[9]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[9]                                                                                                      ; No valid clock domain found ;
-; Zahl2_i[8]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[8]                                                                                                      ; No valid clock domain found ;
-; Zahl2_i[7]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[7]                                                                                                      ; No valid clock domain found ;
-; Zahl2_i[6]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[6]                                                                                                      ; No valid clock domain found ;
-; Zahl2_i[5]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[5]                                                                                                      ; No valid clock domain found ;
-; Zahl2_i[4]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[4]                                                                                                      ; No valid clock domain found ;
-; Zahl2_i[3]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[3]                                                                                                      ; No valid clock domain found ;
-; Zahl2_i[2]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[2]                                                                                                      ; No valid clock domain found ;
-; Zahl2_i[1]                                                                                                      ; No valid clock domain found ;
-; Zahl1_i[1]                                                                                                      ; No valid clock domain found ;
-; datapath:datapath|Zahl1_r[0]~5clkctrl                                                                           ; No valid clock domain found ;
-; datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init~clkctrl ; No valid clock domain found ;
-; datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update~clkctrl     ; No valid clock domain found ;
-; clk~inputclkctrl                                                                                                ; No valid clock domain found ;
-; datapath:datapath|erg_zuvor_r[15]~1clkctrl                                                                      ; No valid clock domain found ;
-; datapath:datapath|Zahl2_r[0]~1clkctrl                                                                           ; No valid clock domain found ;
-+-----------------------------------------------------------------------------------------------------------------+-----------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Indeterminate Toggle Rates                                                                                                                ;
++-------------------------------------------------------------------------------------------------------------+-----------------------------+
+; Node                                                                                                        ; Reason                      ;
++-------------------------------------------------------------------------------------------------------------+-----------------------------+
+; clk                                                                                                         ; No valid clock domain found ;
+; rst                                                                                                         ; No valid clock domain found ;
+; start_i                                                                                                     ; No valid clock domain found ;
+; Zahl2_i[0]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[0]                                                                                                  ; No valid clock domain found ;
+; Zahl2_i[15]                                                                                                 ; No valid clock domain found ;
+; Zahl1_i[15]                                                                                                 ; No valid clock domain found ;
+; Zahl2_i[14]                                                                                                 ; No valid clock domain found ;
+; Zahl1_i[14]                                                                                                 ; No valid clock domain found ;
+; Zahl2_i[13]                                                                                                 ; No valid clock domain found ;
+; Zahl1_i[13]                                                                                                 ; No valid clock domain found ;
+; Zahl2_i[12]                                                                                                 ; No valid clock domain found ;
+; Zahl1_i[12]                                                                                                 ; No valid clock domain found ;
+; Zahl2_i[11]                                                                                                 ; No valid clock domain found ;
+; Zahl1_i[11]                                                                                                 ; No valid clock domain found ;
+; Zahl2_i[10]                                                                                                 ; No valid clock domain found ;
+; Zahl1_i[10]                                                                                                 ; No valid clock domain found ;
+; Zahl2_i[9]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[9]                                                                                                  ; No valid clock domain found ;
+; Zahl2_i[8]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[8]                                                                                                  ; No valid clock domain found ;
+; Zahl2_i[7]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[7]                                                                                                  ; No valid clock domain found ;
+; Zahl2_i[6]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[6]                                                                                                  ; No valid clock domain found ;
+; Zahl2_i[5]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[5]                                                                                                  ; No valid clock domain found ;
+; Zahl2_i[4]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[4]                                                                                                  ; No valid clock domain found ;
+; Zahl2_i[3]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[3]                                                                                                  ; No valid clock domain found ;
+; Zahl2_i[2]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[2]                                                                                                  ; No valid clock domain found ;
+; Zahl2_i[1]                                                                                                  ; No valid clock domain found ;
+; Zahl1_i[1]                                                                                                  ; No valid clock domain found ;
+; datapath:datapath|Zahl1_r[0]~5clkctrl                                                                       ; No valid clock domain found ;
+; datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update~clkctrl ; No valid clock domain found ;
+; clk~inputclkctrl                                                                                            ; No valid clock domain found ;
+; datapath:datapath|Zahl2_r[1]~2clkctrl                                                                       ; No valid clock domain found ;
++-------------------------------------------------------------------------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -247,10 +245,10 @@ https://fpgasoftware.intel.com/eula.
 +----------+---------------+---------------------+-----------------------+----------------------+
 ; I/O Bank ; VCCIO Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Static Current Drawn ;
 +----------+---------------+---------------------+-----------------------+----------------------+
-; 1A       ; 2.5V          ; 0.29 mA             ; 0.00 mA               ; 0.29 mA              ;
+; 1A       ; 2.5V          ; 0.28 mA             ; 0.00 mA               ; 0.28 mA              ;
 ; 1B       ; 2.5V          ; 0.29 mA             ; 0.00 mA               ; 0.29 mA              ;
 ; 2        ; 2.5V          ; 0.28 mA             ; 0.00 mA               ; 0.28 mA              ;
-; 3        ; 2.5V          ; 0.31 mA             ; 0.00 mA               ; 0.31 mA              ;
+; 3        ; 2.5V          ; 0.30 mA             ; 0.00 mA               ; 0.30 mA              ;
 ; 4        ; --            ; --                  ; --                    ; --                   ;
 ; 5        ; 2.5V          ; 0.28 mA             ; 0.00 mA               ; 0.28 mA              ;
 ; 6        ; 2.5V          ; 0.28 mA             ; 0.00 mA               ; 0.28 mA              ;
@@ -281,19 +279,19 @@ https://fpgasoftware.intel.com/eula.
 ;                                                                                        ;             ;            ;              ;               ;
 ; Node, entity or clock assignment                                                       ;             ;            ;              ;               ;
 ;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 6 (0.9%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 6 (1.3%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 4 (0.5%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 4 (0.8%)      ;
 ;                                                                                        ;             ;            ;              ;               ;
 ; Vectorless estimation                                                                  ;             ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 639 (93.8%) ; 18 (30.0%) ; 152 (100.0%) ; 469 (100.0%)  ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 106 (15.6%) ; 1 (1.7%)   ; 34 (22.4%)   ; 71 (15.1%)    ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 633 (93.0%) ; 18 (30.0%) ; 152 (100.0%) ; 463 (98.7%)   ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 749 (94.7%) ; 18 (30.0%) ; 199 (100.0%) ; 532 (100.0%)  ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 106 (13.4%) ; 1 (1.7%)   ; 34 (17.1%)   ; 71 (13.3%)    ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 745 (94.2%) ; 18 (30.0%) ; 199 (100.0%) ; 528 (99.2%)   ;
 ;                                                                                        ;             ;            ;              ;               ;
 ; Default assignment                                                                     ;             ;            ;              ;               ;
 ;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 42 (6.2%)   ; 42 (70.0%) ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 42 (5.3%)   ; 42 (70.0%) ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;             ;            ;              ;               ;
 ; Assumed 0                                                                              ;             ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 42 (6.2%)   ; 42 (70.0%) ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 42 (5.3%)   ; 42 (70.0%) ; 0 (0.0%)     ; 0 (0.0%)      ;
 +----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
 
 
@@ -311,21 +309,19 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Mar  7 16:13:30 2025
+    Info: Processing started: Sat Mar  8 18:37:42 2025
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off Euklidischer_Algorithmus -c Euklidischer_Algorithmus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 96 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 64 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Euklidischer_Algorithmus.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register controller:controller|current_state.STATE_calc is being clocked by clk
-Warning (332060): Node: datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[1] is being clocked by datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init
 Warning (332060): Node: datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[1] is being clocked by datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update
+    Info (13166): Latch datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[15] is being clocked by datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update
 Warning (332060): Node: controller:controller|current_state.STATE_find_smaller was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch datapath:datapath|Zahl2_r[0] is being clocked by controller:controller|current_state.STATE_find_smaller
+    Info (13166): Latch datapath:datapath|Zahl2_r[15] is being clocked by controller:controller|current_state.STATE_find_smaller
 Warning (332068): No clocks defined in design.
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
@@ -335,10 +331,10 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
 Info (215031): Total thermal power estimate for the design is 220.61 mW
-Info: Quartus Prime Power Analyzer was successful. 0 errors, 9 warnings
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 4874 megabytes
-    Info: Processing ended: Fri Mar  7 16:13:38 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Processing ended: Sat Mar  8 18:37:44 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 

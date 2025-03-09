@@ -1,6 +1,6 @@
 module controller(
 
-    input           rst,
+    input           rst_i,
     input           clk,
     input           start_i,
     input           valid_i,
@@ -9,16 +9,16 @@ module controller(
     output reg [2:0]    alu_mode_o,
 
 //===Write-Back-Flags===
-    output reg wren_zw_gross,
-    output reg wren_zw_klein,
-    output reg wren_zw_in_zahlen,
-    output reg wren_erg_modulo,
-    output reg wren_Zahl, 
-    output reg wren_to_new_numbers,
+    output reg wren_zw_gross_o,
+    output reg wren_zw_klein_o,
+    output reg wren_zw_in_zahlen_o,
+    output reg wren_erg_modulo_o,
+    output reg wren_Zahl_o, 
+    output reg wren_to_new_numbers_o,
 
 //===Register-Transfer===
-    output reg Zahl1_to_alu_a,
-    output reg Zahl2_to_alu_b,
+    output reg Zahl1_to_alu_a_o,
+    output reg Zahl2_to_alu_b_o,
 
     output reg check_for_termination_o,
 
@@ -43,8 +43,8 @@ localparam STATE_IDLE                     = 5'd9;
 //===ALU_Kommandos============
 localparam ALU_give_back_bigger     = 3'd0;
 localparam ALU_give_back_smaller    = 3'd1;
-localparam ALU_modulo           = 3'd2;
-localparam ALU_IDLE             = 3'd3;
+localparam ALU_modulo           		= 3'd2;
+localparam ALU_IDLE             		= 3'd3;
 
 
 //===Schrittregister============
@@ -54,7 +54,7 @@ reg                 start_r, valid_r;
 
 
 always @(posedge clk) begin
-    if (rst) begin
+    if (rst_i) begin
         valid_r         <= 1'd0;
         start_r         <= 1'd0;
         current_state   <= STATE_IDLE;
@@ -75,17 +75,17 @@ always @(*) begin
     modulo_start_o = 1'd0;
 
 //===Write-Back-Flags===
-    wren_zw_gross               = 'b0;    
-    wren_zw_klein               = 'b0;    
-    wren_zw_in_zahlen           = 'b0;        
-    wren_erg_modulo             = 'b0;    
-    wren_Zahl                   = 'b0;
-    wren_to_new_numbers         = 'b0;        
+    wren_zw_gross_o               = 'b0;    
+    wren_zw_klein_o               = 'b0;    
+    wren_zw_in_zahlen_o           = 'b0;        
+    wren_erg_modulo_o             = 'b0;    
+    wren_Zahl_o                   = 'b0;
+    wren_to_new_numbers_o         = 'b0;        
 
 //===Register-Transfer===
-    Zahl1_to_alu_a              = 'b0;     
-    Zahl2_to_alu_b              = 'b0;     
-    //erg_modulo_to_alu_a         = 'b0;         
+    Zahl1_to_alu_a_o              = 'b0;     
+    Zahl2_to_alu_b_o              = 'b0;     
+           
 
 
 
@@ -104,8 +104,8 @@ always @(*) begin
         STATE_find_bigger: begin              //1
             next_state = STATE_find_smaller;
 
-            Zahl1_to_alu_a = 1'b1;
-            Zahl2_to_alu_b = 1'b1;
+            Zahl1_to_alu_a_o = 1'b1;
+            Zahl2_to_alu_b_o = 1'b1;
 
             alu_mode_o = ALU_give_back_bigger;
         end
@@ -114,10 +114,10 @@ always @(*) begin
         STATE_find_smaller: begin             //2
             next_state = STATE_write_both;
 
-            Zahl1_to_alu_a = 1'b1;
-            Zahl2_to_alu_b = 1'b1;
+            Zahl1_to_alu_a_o = 1'b1;
+            Zahl2_to_alu_b_o = 1'b1;
 
-            wren_zw_gross = 1'b1;
+            wren_zw_gross_o = 1'b1;
         
             alu_mode_o = ALU_give_back_smaller;
         end
@@ -126,14 +126,14 @@ always @(*) begin
         STATE_write_both: begin               //3
             next_state = STATE_write_zwischenspeicher;
 
-            wren_zw_klein = 1'b1;
+            wren_zw_klein_o = 1'b1;
             
         end
 
         STATE_write_zwischenspeicher: begin
             next_state = STATE_calc;
 
-            wren_zw_in_zahlen = 1'b1;
+            wren_zw_in_zahlen_o = 1'b1;
         end
 
 
@@ -144,8 +144,8 @@ always @(*) begin
                 next_state = STATE_write_erg;
             end
             
-            Zahl1_to_alu_a = 1'b1;
-            Zahl2_to_alu_b = 1'b1;
+            Zahl1_to_alu_a_o = 1'b1;
+            Zahl2_to_alu_b_o = 1'b1;
 
             alu_mode_o = ALU_modulo;
             modulo_start_o = 1'd1;
@@ -154,7 +154,7 @@ always @(*) begin
         STATE_write_erg: begin            //5
             next_state = STATE_check_if_zero;
 
-            wren_erg_modulo = 1'b1;
+            wren_erg_modulo_o = 1'b1;
         end
 
         STATE_check_if_zero: begin
@@ -166,13 +166,13 @@ always @(*) begin
         STATE_write_Zahl: begin
             next_state = STATE_write_numbers;
             
-            wren_Zahl = 1'b1;
+            wren_Zahl_o = 1'b1;
         end
 
         STATE_write_numbers: begin            //7
             next_state = STATE_calc;
 
-            wren_to_new_numbers = 1'b1;
+            wren_to_new_numbers_o = 1'b1;
         end
 
     endcase

@@ -1,5 +1,5 @@
 module datapath_modulo (
-    input           rst,
+    input           rst_i,
     input           clk,
 
     input           start_i,
@@ -46,7 +46,7 @@ module datapath_modulo (
 //===ALU-Instanziierung==========
 
 alu_modulo alu(
- .rst(rst), 
+ .rst(rst_i), 
  .clk(clk), 
  .alu_mode_i(alu_mode_i),
  .op_a_i(alu_a_temp),
@@ -56,7 +56,7 @@ alu_modulo alu(
 );
 
 always @(posedge clk) begin
-    if (rst) begin
+    if (rst_i) begin
         Zahl1_temp          <= 'd0;
         Zahl2_temp          <= 'd0;
         //Zahl1_r             <= 'd0;

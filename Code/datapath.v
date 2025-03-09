@@ -1,6 +1,6 @@
 module datapath (
 
-    input           rst,
+    input           rst_i,
     input           clk,
     input           modulo_start_i,
 
@@ -11,21 +11,21 @@ module datapath (
     input   [2:0]   alu_mode_i,
 
     //===Write-Back-Flags===
-    input wren_zw_gross,
-    input wren_zw_klein,
-    input wren_zw_in_zahlen,
-    input wren_erg_modulo,
-    input wren_Zahl,
-    input wren_to_new_numbers,
+    input wren_zw_gross_i,
+    input wren_zw_klein_i,
+    input wren_zw_in_zahlen_i,
+    input wren_erg_modulo_i,
+    input wren_Zahl_i,
+    input wren_to_new_numbers_i,
 
 //===Register-Transfer===
-    input Zahl1_to_alu_a,
-    input Zahl2_to_alu_b,
+    input Zahl1_to_alu_a_i,
+    input Zahl2_to_alu_b_i,
 
     input check_for_termination_i,
 
     output              valid_o,
-    output wire [15:0]  ergebnis,
+    output wire [15:0]  ergebnis_o,
     output              modulo_ready_o
 );
 
@@ -48,7 +48,7 @@ module datapath (
     //===ALU-Instanziierung====================
 
     alu alu(
-        .rst(rst),
+        .rst_i(rst_i),
         .clk(clk),
         .alu_mode_i(alu_mode_i),
         .op_a_i(alu_a_temp),
@@ -61,7 +61,7 @@ module datapath (
 
 
     always @(posedge clk) begin
-        if (rst) begin
+        if (rst_i) begin
             Zahl1_temp          <= 'd0;
             Zahl2_temp          <= 'd0;
             //Zahl1_r             <= 'd0;
@@ -101,29 +101,29 @@ module datapath (
         end
 
         //===Write-Back-Logic==========
-        if (wren_zw_gross) begin
+        if (wren_zw_gross_i) begin
             zwischen_gross_temp = wbb;
         end
 
-        else if (wren_zw_klein) begin
+        else if (wren_zw_klein_i) begin
             zwischen_klein_temp = wbb;
         end
 
-        else if (wren_zw_in_zahlen) begin
+        else if (wren_zw_in_zahlen_i) begin
             Zahl1_r         = zwischen_gross_r;
             Zahl2_r         = zwischen_klein_r;
             erg_zuvor_temp     = zwischen_klein_r;
         end
 
-        else if (wren_erg_modulo) begin
+        else if (wren_erg_modulo_i) begin
             erg_modulo_temp = wbb;
         end
 
-        else if (wren_Zahl) begin
+        else if (wren_Zahl_i) begin
             Zahl1_r = Zahl2_r;
         end
 
-        else if (wren_to_new_numbers) begin
+        else if (wren_to_new_numbers_i) begin
             
             Zahl2_r = erg_modulo_r;
             erg_zuvor_temp = erg_modulo_r;
@@ -131,10 +131,10 @@ module datapath (
         end
 
         //===Register-Transfer-Logic===
-        if (Zahl1_to_alu_a) begin
+        if (Zahl1_to_alu_a_i) begin
             alu_a_temp = Zahl1_r;
         end
-        if (Zahl2_to_alu_b) begin
+        if (Zahl2_to_alu_b_i) begin
             alu_b_temp = Zahl2_r;
         end
     
@@ -142,7 +142,7 @@ module datapath (
     
 assign wbb      = alu_c_r;
 assign valid_o  = check_for_termination_i & (erg_modulo_r == 'd0);
-assign ergebnis = erg_zuvor_r;
+assign ergebnis_o = erg_zuvor_r;
 
 
 endmodule

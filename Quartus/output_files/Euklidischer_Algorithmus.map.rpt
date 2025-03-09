@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Euklidischer_Algorithmus
-Sun Mar  9 08:14:04 2025
+Sun Mar  9 10:02:49 2025
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -14,15 +14,15 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |testbench|ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state
- 10. State Machine - |testbench|ggt_top:top|controller:controller|current_state
+  9. State Machine - |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state
+ 10. State Machine - |testbench|ggt_top:TOP|controller:controller|current_state
  11. Registers Removed During Synthesis
  12. Removed Registers Triggering Further Register Optimizations
  13. General Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: logic_pll:pll|altpll:altpll_component
+ 15. Parameter Settings for User Entity Instance: logic_pll:PLL|altpll:altpll_component
  16. altpll Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "ggt_top:top"
+ 17. Port Connectivity Checks: "ggt_top:TOP"
  18. Post-Synthesis Netlist Statistics for Top Partition
  19. Elapsed Time Per Partition
  20. Analysis & Synthesis Messages
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar  9 08:14:04 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar  9 10:02:49 2025       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; Euklidischer_Algorithmus                    ;
 ; Top-level Entity Name              ; testbench                                   ;
@@ -243,13 +243,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+--------------------------+-----------------+
-; Altera ; ALTPLL       ; 21.1    ; N/A          ; N/A          ; |testbench|logic_pll:pll ; logic_pll.v     ;
+; Altera ; ALTPLL       ; 21.1    ; N/A          ; N/A          ; |testbench|logic_pll:PLL ; logic_pll.v     ;
 +--------+--------------+---------+--------------+--------------+--------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |testbench|ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state                                                                                                                                                  ;
+; State Machine - |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state                                                                                                                                                  ;
 +--------------------------------+----------------------------+---------------------------+--------------------------+--------------------------------+--------------------------------+-----------------------------+--------------------------------+--------------------------+
 ; Name                           ; current_state.STATE_update ; current_state.STATE_write ; current_state.STATE_diff ; current_state.STATE_check_term ; current_state.STATE_write_comp ; current_state.STATE_compare ; current_state.STATE_write_init ; current_state.STATE_IDLE ;
 +--------------------------------+----------------------------+---------------------------+--------------------------+--------------------------------+--------------------------------+-----------------------------+--------------------------------+--------------------------+
@@ -266,7 +266,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |testbench|ggt_top:top|controller:controller|current_state                                                                                                                                                                                                                                                                                                                   ;
+; State Machine - |testbench|ggt_top:TOP|controller:controller|current_state                                                                                                                                                                                                                                                                                                                   ;
 +--------------------------------------------+---------------------------------+-----------------------------------+--------------------------------+-----------------------------------+-------------------------------+--------------------------+--------------------------------------------+--------------------------------+----------------------------------+--------------------------+
 ; Name                                       ; current_state.STATE_find_bigger ; current_state.STATE_write_numbers ; current_state.STATE_write_Zahl ; current_state.STATE_check_if_zero ; current_state.STATE_write_erg ; current_state.STATE_calc ; current_state.STATE_write_zwischenspeicher ; current_state.STATE_write_both ; current_state.STATE_find_smaller ; current_state.STATE_IDLE ;
 +--------------------------------------------+---------------------------------+-----------------------------------+--------------------------------+-----------------------------------+-------------------------------+--------------------------+--------------------------------------------+--------------------------------+----------------------------------+--------------------------+
@@ -288,55 +288,49 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
 ; Register name                                                                                                       ; Reason for Removal                          ;
 +---------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
-; ggt_top:top|datapath:datapath|start_r                                                                               ; Stuck at GND due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|Zahl2_temp[0]                                                                         ; Stuck at GND due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|Zahl2_temp[1]                                                                         ; Stuck at VCC due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|Zahl2_temp[2,3]                                                                       ; Stuck at GND due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|Zahl2_temp[4]                                                                         ; Stuck at VCC due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|Zahl2_temp[5..15]                                                                     ; Stuck at GND due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|Zahl1_temp[0..3]                                                                      ; Stuck at GND due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|Zahl1_temp[4,5]                                                                       ; Stuck at VCC due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|Zahl1_temp[6..15]                                                                     ; Stuck at GND due to stuck port data_in      ;
-; ggt_top:top|controller:controller|start_r                                                                           ; Stuck at GND due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|zwischen_klein_r[0]                                                                   ; Stuck at GND due to stuck port clock_enable ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[0..15]                                                               ; Stuck at GND due to stuck port clock_enable ;
-; ggt_top:top|datapath:datapath|zwischen_klein_r[1..15]                                                               ; Stuck at GND due to stuck port clock_enable ;
-; ggt_top:top|controller:controller|current_state.STATE_find_smaller                                                  ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state.STATE_write_both                                                    ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state.STATE_find_bigger                                                   ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~2                ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~3                ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~4                ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~5                ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state~2                                                                   ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state~3                                                                   ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state~4                                                                   ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state~5                                                                   ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state.STATE_write_zwischenspeicher                                        ; Stuck at GND due to stuck port data_in      ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|valid_r                        ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|start_r                        ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|erg_modulo_r[0..15]                                                                   ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|termination_erg_r[0]               ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu_c_r[0..15]                                                                        ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[0]                         ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[0..15]                  ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[1..15]                     ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[0..15]                  ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[0..15]                  ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_IDLE       ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_compare    ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_comp ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_check_term ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_diff       ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write      ; Lost fanout                                 ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update     ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state.STATE_IDLE                                                          ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state.STATE_calc                                                          ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state.STATE_write_erg                                                     ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state.STATE_check_if_zero                                                 ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state.STATE_write_Zahl                                                    ; Lost fanout                                 ;
-; ggt_top:top|controller:controller|current_state.STATE_write_numbers                                                 ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|start_r                                                                               ; Stuck at GND due to stuck port data_in      ;
+; ggt_top:TOP|datapath:datapath|Zahl2_temp[0..15]                                                                     ; Stuck at GND due to stuck port data_in      ;
+; ggt_top:TOP|datapath:datapath|Zahl1_temp[0..15]                                                                     ; Stuck at GND due to stuck port data_in      ;
+; ggt_top:TOP|controller:controller|start_r                                                                           ; Stuck at GND due to stuck port data_in      ;
+; ggt_top:TOP|datapath:datapath|zwischen_klein_r[0]                                                                   ; Stuck at GND due to stuck port clock_enable ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[0..15]                                                               ; Stuck at GND due to stuck port clock_enable ;
+; ggt_top:TOP|datapath:datapath|zwischen_klein_r[1..15]                                                               ; Stuck at GND due to stuck port clock_enable ;
+; ggt_top:TOP|controller:controller|current_state.STATE_find_smaller                                                  ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state.STATE_write_both                                                    ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state.STATE_find_bigger                                                   ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~2                ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~3                ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~4                ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~5                ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state~2                                                                   ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state~3                                                                   ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state~4                                                                   ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state~5                                                                   ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state.STATE_write_zwischenspeicher                                        ; Stuck at GND due to stuck port data_in      ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|valid_r                        ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|start_r                        ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|erg_modulo_r[0..15]                                                                   ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|termination_erg_r[0]               ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu_c_r[0..15]                                                                        ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[0]                         ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[0..15]                  ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[1..15]                     ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[0..15]                  ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[0..15]                  ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_IDLE       ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_compare    ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_comp ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_check_term ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_diff       ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write      ; Lost fanout                                 ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update     ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state.STATE_IDLE                                                          ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state.STATE_calc                                                          ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state.STATE_write_erg                                                     ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state.STATE_check_if_zero                                                 ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state.STATE_write_Zahl                                                    ; Lost fanout                                 ;
+; ggt_top:TOP|controller:controller|current_state.STATE_write_numbers                                                 ; Lost fanout                                 ;
 ; Total Number of Removed Registers = 191                                                                             ;                                             ;
 +---------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
 
@@ -346,123 +340,123 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                        ; Reason for Removal             ; Registers Removed due to This Register                                                                               ;
 +------------------------------------------------------------------------------------------------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------+
-; ggt_top:top|datapath:datapath|zwischen_klein_r[0]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[0],                                                                            ;
-;                                                                                                      ; due to stuck port clock_enable ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[0],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[1],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[2],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[3],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[4],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[5],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[6],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[7],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[8],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[9],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[10],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[11],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[12],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[13],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[14],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[15],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[1],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[2],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[3],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[4],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[5],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[6],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[7],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[8],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[9],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[10],                        ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[11],                        ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[12],                        ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[13],                        ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[14],                        ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[15],                        ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[0],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[1],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[2],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[3],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[4],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[5],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[6],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[7],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[8],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[9],                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[10],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[11],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[12],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[13],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[14],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[15]                      ;
-; ggt_top:top|datapath:datapath|start_r                                                                ; Stuck at GND                   ; ggt_top:top|datapath:datapath|erg_modulo_r[0],                                                                       ;
-;                                                                                                      ; due to stuck port data_in      ; ggt_top:top|datapath:datapath|erg_modulo_r[1],                                                                       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[2],                                                                       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[3],                                                                       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[4],                                                                       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[5],                                                                       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[6],                                                                       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[7],                                                                       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[8],                                                                       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[9],                                                                       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[10],                                                                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[11],                                                                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[12],                                                                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[13],                                                                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[14],                                                                      ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|erg_modulo_r[15]                                                                       ;
-; ggt_top:top|controller:controller|current_state~4                                                    ; Lost Fanouts                   ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|termination_erg_r[0],               ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[0],                         ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[15],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[14],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[13],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[12],                     ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[11]                      ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~2 ; Lost Fanouts                   ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|valid_r,                        ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|start_r,                        ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_IDLE,       ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init, ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_comp, ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_diff        ;
-; ggt_top:top|controller:controller|current_state~2                                                    ; Lost Fanouts                   ; ggt_top:top|controller:controller|current_state.STATE_write_erg,                                                     ;
-;                                                                                                      ;                                ; ggt_top:top|controller:controller|current_state.STATE_write_Zahl,                                                    ;
-;                                                                                                      ;                                ; ggt_top:top|controller:controller|current_state.STATE_write_numbers                                                  ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~3 ; Lost Fanouts                   ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_check_term, ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update      ;
-; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~4 ; Lost Fanouts                   ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_compare,    ;
-;                                                                                                      ;                                ; ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write       ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[15]                                                   ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[15]                                                                            ;
+; ggt_top:TOP|datapath:datapath|zwischen_klein_r[0]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[0],                                                                            ;
+;                                                                                                      ; due to stuck port clock_enable ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[0],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[1],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[2],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[3],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[4],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[5],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[6],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[7],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[8],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[9],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[10],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[11],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[12],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[13],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[14],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[15],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[1],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[2],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[3],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[4],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[5],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[6],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[7],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[8],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[9],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[10],                        ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[11],                        ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[12],                        ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[13],                        ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[14],                        ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[15],                        ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[0],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[1],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[2],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[3],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[4],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[5],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[6],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[7],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[8],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[9],                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[10],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[11],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[12],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[13],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[14],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_temp[15]                      ;
+; ggt_top:TOP|datapath:datapath|start_r                                                                ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|erg_modulo_r[0],                                                                       ;
+;                                                                                                      ; due to stuck port data_in      ; ggt_top:TOP|datapath:datapath|erg_modulo_r[1],                                                                       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[2],                                                                       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[3],                                                                       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[4],                                                                       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[5],                                                                       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[6],                                                                       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[7],                                                                       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[8],                                                                       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[9],                                                                       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[10],                                                                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[11],                                                                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[12],                                                                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[13],                                                                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[14],                                                                      ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|erg_modulo_r[15]                                                                       ;
+; ggt_top:TOP|controller:controller|current_state~4                                                    ; Lost Fanouts                   ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|termination_erg_r[0],               ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_c_r[0],                         ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[15],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[14],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[13],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[12],                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_temp[11]                      ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~2 ; Lost Fanouts                   ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|valid_r,                        ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|start_r,                        ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_IDLE,       ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_init, ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write_comp, ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_diff        ;
+; ggt_top:TOP|controller:controller|current_state~2                                                    ; Lost Fanouts                   ; ggt_top:TOP|controller:controller|current_state.STATE_write_erg,                                                     ;
+;                                                                                                      ;                                ; ggt_top:TOP|controller:controller|current_state.STATE_write_Zahl,                                                    ;
+;                                                                                                      ;                                ; ggt_top:TOP|controller:controller|current_state.STATE_write_numbers                                                  ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~3 ; Lost Fanouts                   ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_check_term, ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update      ;
+; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~4 ; Lost Fanouts                   ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_compare,    ;
+;                                                                                                      ;                                ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_write       ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[15]                                                   ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[15]                                                                            ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[14]                                                   ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[14]                                                                            ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[14]                                                   ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[14]                                                                            ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[13]                                                   ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[13]                                                                            ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[13]                                                   ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[13]                                                                            ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[12]                                                   ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[12]                                                                            ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[12]                                                   ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[12]                                                                            ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[11]                                                   ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[11]                                                                            ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[11]                                                   ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[11]                                                                            ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[10]                                                   ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[10]                                                                            ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[10]                                                   ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[10]                                                                            ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[9]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[9]                                                                             ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[9]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[9]                                                                             ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[8]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[8]                                                                             ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[8]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[8]                                                                             ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[7]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[7]                                                                             ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[7]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[7]                                                                             ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[6]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[6]                                                                             ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[6]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[6]                                                                             ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[5]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[5]                                                                             ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[5]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[5]                                                                             ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[4]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[4]                                                                             ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[4]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[4]                                                                             ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[3]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[3]                                                                             ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[3]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[3]                                                                             ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[2]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[2]                                                                             ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[2]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[2]                                                                             ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|datapath:datapath|zwischen_gross_r[1]                                                    ; Stuck at GND                   ; ggt_top:top|datapath:datapath|alu_c_r[1]                                                                             ;
+; ggt_top:TOP|datapath:datapath|zwischen_gross_r[1]                                                    ; Stuck at GND                   ; ggt_top:TOP|datapath:datapath|alu_c_r[1]                                                                             ;
 ;                                                                                                      ; due to stuck port clock_enable ;                                                                                                                      ;
-; ggt_top:top|controller:controller|current_state~3                                                    ; Lost Fanouts                   ; ggt_top:top|controller:controller|current_state.STATE_check_if_zero                                                  ;
-; ggt_top:top|controller:controller|current_state~5                                                    ; Lost Fanouts                   ; ggt_top:top|controller:controller|current_state.STATE_IDLE                                                           ;
-; ggt_top:top|controller:controller|current_state.STATE_write_zwischenspeicher                         ; Stuck at GND                   ; ggt_top:top|controller:controller|current_state.STATE_calc                                                           ;
+; ggt_top:TOP|controller:controller|current_state~3                                                    ; Lost Fanouts                   ; ggt_top:TOP|controller:controller|current_state.STATE_check_if_zero                                                  ;
+; ggt_top:TOP|controller:controller|current_state~5                                                    ; Lost Fanouts                   ; ggt_top:TOP|controller:controller|current_state.STATE_IDLE                                                           ;
+; ggt_top:TOP|controller:controller|current_state.STATE_write_zwischenspeicher                         ; Stuck at GND                   ; ggt_top:TOP|controller:controller|current_state.STATE_calc                                                           ;
 ;                                                                                                      ; due to stuck port data_in      ;                                                                                                                      ;
 +------------------------------------------------------------------------------------------------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
@@ -487,17 +481,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |testbench|ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[11]              ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |testbench|ggt_top:top|datapath:datapath|alu_c_r[0]                                                                     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |testbench|ggt_top:top|datapath:datapath|Zahl1_r[0]                                                                     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |testbench|ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|next_state.STATE_update ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |testbench|ggt_top:top|datapath:datapath|Zahl1_r[3]                                                                     ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |testbench|ggt_top:top|datapath:datapath|Zahl2_r[6]                                                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[11]              ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |testbench|ggt_top:TOP|datapath:datapath|alu_c_r[0]                                                                     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |testbench|ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|next_state.STATE_update ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |testbench|ggt_top:TOP|datapath:datapath|Zahl1_r[3]                                                                     ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |testbench|ggt_top:TOP|datapath:datapath|Zahl2_r[6]                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: logic_pll:pll|altpll:altpll_component ;
+; Parameter Settings for User Entity Instance: logic_pll:PLL|altpll:altpll_component ;
 +-------------------------------+-----------------------------+----------------------+
 ; Parameter Name                ; Value                       ; Type                 ;
 +-------------------------------+-----------------------------+----------------------+
@@ -876,7 +870,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                          ; Value                                 ;
 +-------------------------------+---------------------------------------+
 ; Number of entity instances    ; 1                                     ;
-; Entity Instance               ; logic_pll:pll|altpll:altpll_component ;
+; Entity Instance               ; logic_pll:PLL|altpll:altpll_component ;
 ;     -- OPERATION_MODE         ; NORMAL                                ;
 ;     -- PLL_TYPE               ; AUTO                                  ;
 ;     -- PRIMARY_CLOCK          ; INCLK0                                ;
@@ -887,24 +881,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+---------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ggt_top:top"                                                                                  ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; rst            ; Input  ; Info     ; Stuck at GND                                                                        ;
-; start_i        ; Input  ; Info     ; Stuck at GND                                                                        ;
-; Zahl1_i[5..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; Zahl1_i[15..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; Zahl1_i[3..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; Zahl2_i[15..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; Zahl2_i[3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; Zahl2_i[4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; Zahl2_i[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; Zahl2_i[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; ergebnis       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; valid          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ggt_top:TOP"                                                                              ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; rst_i      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; start_i    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Zahl1_i    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Zahl2_i    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; valid_o    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ergebnis_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -934,7 +922,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Sun Mar  9 08:13:55 2025
+    Info: Processing started: Sun Mar  9 10:02:41 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Euklidischer_Algorithmus -c Euklidischer_Algorithmus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -956,19 +944,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: alu_modulo File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu_modulo.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/jotru/desktop/projekt_se/schaltkreisentwurf_projekt/code/alu.v
     Info (12023): Found entity 1: alu File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file logic_pll.v
-    Info (12023): Found entity 1: logic_pll File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/logic_pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file euklidischer_algorithmus.bdf
     Info (12023): Found entity 1: Euklidischer_Algorithmus
+Info (12021): Found 1 design units, including 1 entities, in source file logic_pll.v
+    Info (12023): Found entity 1: logic_pll File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/logic_pll.v Line: 40
 Info (12127): Elaborating entity "testbench" for the top level hierarchy
-Warning (10193): Verilog HDL unsupported feature warning at testbench.v(80): Wait Statement is not supported and is ignored File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 80
-Info (10648): Verilog HDL Display System Task info at testbench.v(86): Berechnung abgeschlossen:     48 (ggT)     18 = [     0] File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 86
-Info (10648): Verilog HDL Display System Task info at testbench.v(96): Alle Berechnungen abgeschlossen. Ergebnisse gespeichert. File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 96
-Warning (10175): Verilog HDL warning at testbench.v(97): ignoring unsupported system task File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 97
-Info (12128): Elaborating entity "ggt_top" for hierarchy "ggt_top:top" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 32
-Info (12128): Elaborating entity "controller" for hierarchy "ggt_top:top|controller:controller" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/ggt_top.v Line: 53
+Warning (10193): Verilog HDL unsupported feature warning at testbench.v(57): Wait Statement is not supported and is ignored File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 57
+Info (10648): Verilog HDL Display System Task info at testbench.v(61): Alle Berechnungen abgeschlossen. Ergebnisse gespeichert. File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 61
+Warning (10175): Verilog HDL warning at testbench.v(62): ignoring unsupported system task File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 62
+Warning (10030): Net "Zahl1" at testbench.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 9
+Warning (10030): Net "Zahl2" at testbench.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 10
+Info (12128): Elaborating entity "ggt_top" for hierarchy "ggt_top:TOP" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 35
+Info (12128): Elaborating entity "controller" for hierarchy "ggt_top:TOP|controller:controller" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/ggt_top.v Line: 57
 Warning (10036): Verilog HDL or VHDL warning at controller.v(52): object "valid_r" assigned a value but never read File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 52
-Info (12128): Elaborating entity "datapath" for hierarchy "ggt_top:top|datapath:datapath" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/ggt_top.v Line: 82
+Info (12128): Elaborating entity "datapath" for hierarchy "ggt_top:TOP|datapath:datapath" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/ggt_top.v Line: 86
 Warning (10240): Verilog HDL Always Construct warning at datapath.v(90): inferring latch(es) for variable "Zahl1_r", which holds its previous value in one or more paths through the always construct File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 90
 Warning (10240): Verilog HDL Always Construct warning at datapath.v(90): inferring latch(es) for variable "Zahl2_r", which holds its previous value in one or more paths through the always construct File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 90
 Info (10041): Inferred latch for "Zahl2_r[0]" at datapath.v(108) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 108
@@ -1003,13 +992,13 @@ Info (10041): Inferred latch for "Zahl1_r[12]" at datapath.v(108) File: C:/Users
 Info (10041): Inferred latch for "Zahl1_r[13]" at datapath.v(108) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 108
 Info (10041): Inferred latch for "Zahl1_r[14]" at datapath.v(108) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 108
 Info (10041): Inferred latch for "Zahl1_r[15]" at datapath.v(108) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 108
-Info (12128): Elaborating entity "alu" for hierarchy "ggt_top:top|datapath:datapath|alu:alu" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 60
-Info (12128): Elaborating entity "modulo_top" for hierarchy "ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu.v Line: 28
-Info (12128): Elaborating entity "controller_modulo" for hierarchy "ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v Line: 39
+Info (12128): Elaborating entity "alu" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 60
+Info (12128): Elaborating entity "modulo_top" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu.v Line: 28
+Info (12128): Elaborating entity "controller_modulo" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v Line: 39
 Warning (10230): Verilog HDL assignment warning at controller_modulo.v(59): truncated value with size 4 to match size of target (3) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller_modulo.v Line: 59
 Warning (10230): Verilog HDL assignment warning at controller_modulo.v(100): truncated value with size 4 to match size of target (3) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller_modulo.v Line: 100
 Warning (10230): Verilog HDL assignment warning at controller_modulo.v(120): truncated value with size 4 to match size of target (3) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller_modulo.v Line: 120
-Info (12128): Elaborating entity "datapath_modulo" for hierarchy "ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v Line: 64
+Info (12128): Elaborating entity "datapath_modulo" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v Line: 64
 Warning (10036): Verilog HDL or VHDL warning at datapath_modulo.v(30): object "running" assigned a value but never read File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 30
 Warning (10240): Verilog HDL Always Construct warning at datapath_modulo.v(82): inferring latch(es) for variable "Zahl1_r", which holds its previous value in one or more paths through the always construct File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 82
 Warning (10240): Verilog HDL Always Construct warning at datapath_modulo.v(82): inferring latch(es) for variable "Zahl2_r", which holds its previous value in one or more paths through the always construct File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 82
@@ -1046,11 +1035,11 @@ Info (10041): Inferred latch for "Zahl1_r[12]" at datapath_modulo.v(101) File: C
 Info (10041): Inferred latch for "Zahl1_r[13]" at datapath_modulo.v(101) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 101
 Info (10041): Inferred latch for "Zahl1_r[14]" at datapath_modulo.v(101) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 101
 Info (10041): Inferred latch for "Zahl1_r[15]" at datapath_modulo.v(101) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 101
-Info (12128): Elaborating entity "alu_modulo" for hierarchy "ggt_top:top|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_modulo:alu" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 56
-Info (12128): Elaborating entity "logic_pll" for hierarchy "logic_pll:pll" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 38
-Info (12128): Elaborating entity "altpll" for hierarchy "logic_pll:pll|altpll:altpll_component" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/logic_pll.v Line: 91
-Info (12130): Elaborated megafunction instantiation "logic_pll:pll|altpll:altpll_component" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/logic_pll.v Line: 91
-Info (12133): Instantiated megafunction "logic_pll:pll|altpll:altpll_component" with the following parameter: File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/logic_pll.v Line: 91
+Info (12128): Elaborating entity "alu_modulo" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_modulo:alu" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 56
+Info (12128): Elaborating entity "logic_pll" for hierarchy "logic_pll:PLL" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 41
+Info (12128): Elaborating entity "altpll" for hierarchy "logic_pll:PLL|altpll:altpll_component" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/logic_pll.v Line: 91
+Info (12130): Elaborated megafunction instantiation "logic_pll:PLL|altpll:altpll_component" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/logic_pll.v Line: 91
+Info (12133): Instantiated megafunction "logic_pll:PLL|altpll:altpll_component" with the following parameter: File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/logic_pll.v Line: 91
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "12"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1107,10 +1096,10 @@ Info (12133): Instantiated megafunction "logic_pll:pll|altpll:altpll_component" 
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/logic_pll_altpll.v
     Info (12023): Found entity 1: logic_pll_altpll File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/db/logic_pll_altpll.v Line: 30
-Info (12128): Elaborating entity "logic_pll_altpll" for hierarchy "logic_pll:pll|altpll:altpll_component|logic_pll_altpll:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "logic_pll_altpll" for hierarchy "logic_pll:PLL|altpll:altpll_component|logic_pll_altpll:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following PLL node(s):
-        Warning (14320): Synthesized away node "logic_pll:pll|altpll:altpll_component|logic_pll_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/db/logic_pll_altpll.v Line: 78
+        Warning (14320): Synthesized away node "logic_pll:PLL|altpll:altpll_component|logic_pll_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/db/logic_pll_altpll.v Line: 78
 Info (17049): 124 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1119,10 +1108,10 @@ Warning (21074): Design contains 1 input pin(s) that do not drive logic
 Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
     Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Sun Mar  9 08:14:04 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Sun Mar  9 10:02:49 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

@@ -1,5 +1,5 @@
 module alu (
-    input                   rst, clk, 
+    input                   rst_i, clk, 
     input       [2:0]       alu_mode_i,
     input                   modulo_start_i,
 
@@ -15,7 +15,7 @@ wire [15:0]     modulo_zwischenspeicher;
 
  modulo_top modulo(
 
-            .rst(rst), 
+            .rst_i(rst_i), 
             .clk(clk), 
             .start_i(modulo_start_i),
 

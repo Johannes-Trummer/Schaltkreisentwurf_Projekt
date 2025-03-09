@@ -64,7 +64,7 @@
  ---------------------------------------------------------------------------------
 
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-CHIP  "Euklidischer_Algorithmus"  ASSIGNED TO AN: 10M16SAU169C8G
+CHIP  "Euklidischer_Algorithmus"  ASSIGNED TO AN: 10M08SAU169C8G
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------

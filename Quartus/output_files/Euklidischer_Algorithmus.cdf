@@ -3,8 +3,8 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
-	P ActionCode(Cfg)
-		Device PartName(10M16SAU169) Path("C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/output_files/") File("Euklidischer_Algorithmus.sof") MfrSpec(OpMask(1));
+	P ActionCode(Ign)
+		Device PartName(10M08SAU169) MfrSpec(OpMask(0) FullPath("C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/output_files/Euklidischer_Algorithmus.sof"));
 
 ChainEnd;
 

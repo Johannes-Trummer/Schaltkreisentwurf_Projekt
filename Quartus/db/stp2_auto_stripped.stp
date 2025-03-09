@@ -1,0 +1,22 @@
+<session jtag_chain="Arrow-USB-Blaster [ARA26839-TEI0001]" jtag_device="@1: 10M08SA(.|ES)/10M08S(C|L) (0x031820DD)" sof_file="">
+  <display_tree gui_logging_enabled="0"/>
+  <instance enabled="true" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <single attribute="lock mode" value="0"/>
+    <multi attribute="frame size" size="2" value="1872,863"/>
+    <multi attribute="jtag widget size" size="2" value="447,166"/>
+  </global_info>
+</session>

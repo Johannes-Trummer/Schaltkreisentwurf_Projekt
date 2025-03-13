@@ -17,6 +17,7 @@ module datapath (
     input wren_erg_modulo_i,
     input wren_Zahl_i,
     input wren_to_new_numbers_i,
+    input wren_initial_i,
 
 //===Register-Transfer===
     input Zahl1_to_alu_a_i,
@@ -95,11 +96,7 @@ module datapath (
         zwischen_gross_temp = zwischen_gross_r;
         zwischen_klein_temp = zwischen_klein_r;
 
-        if (start_r) begin
-            Zahl1_r = Zahl1_temp;
-            Zahl2_r = Zahl2_temp;
-        end
-
+        
         //===Write-Back-Logic==========
         if (wren_zw_gross_i) begin
             zwischen_gross_temp = wbb;
@@ -128,6 +125,10 @@ module datapath (
             Zahl2_r = erg_modulo_r;
             erg_zuvor_temp = erg_modulo_r;
 
+        end
+        else if (wren_initial_i) begin
+            Zahl1_r = Zahl1_temp;
+            Zahl2_r = Zahl2_temp;
         end
 
         //===Register-Transfer-Logic===

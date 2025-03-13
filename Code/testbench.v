@@ -1,4 +1,4 @@
-//`define SIMULATION;  // Diese Zeile einkommentieren, wenn keine Datei-Handles genutzt werden sollen
+`define SIMULATION;  // Diese Zeile einkommentieren, wenn keine Datei-Handles genutzt werden sollen
 
 
 `ifndef SIMULATION

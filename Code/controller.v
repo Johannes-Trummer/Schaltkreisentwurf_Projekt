@@ -15,6 +15,7 @@ module controller(
     output reg wren_erg_modulo_o,
     output reg wren_Zahl_o, 
     output reg wren_to_new_numbers_o,
+    output reg wren_initial_o,
 
 //===Register-Transfer===
     output reg Zahl1_to_alu_a_o,
@@ -27,17 +28,18 @@ module controller(
 );
 
 //===Schritte================
-localparam STATE_find_bigger              = 5'b0;
-localparam STATE_find_smaller             = 5'd1;
-localparam STATE_write_both               = 5'd2;
-localparam STATE_write_zwischenspeicher   = 5'd3;
+localparam STATE_initial_write            = 5'd0;
+localparam STATE_find_bigger              = 5'd1;
+localparam STATE_find_smaller             = 5'd2;
+localparam STATE_write_both               = 5'd3;
+localparam STATE_write_zwischenspeicher   = 5'd4;
 
-localparam STATE_calc                     = 5'd4; //iterative Schritte des Algorithmus
-localparam STATE_write_erg                = 5'd5;
-localparam STATE_check_if_zero            = 5'd6;
-localparam STATE_write_Zahl               = 5'd7;
-localparam STATE_write_numbers            = 5'd8;
-localparam STATE_IDLE                     = 5'd9;
+localparam STATE_calc                     = 5'd5; //iterative Schritte des Algorithmus
+localparam STATE_write_erg                = 5'd6;
+localparam STATE_check_if_zero            = 5'd7;
+localparam STATE_write_Zahl               = 5'd8;
+localparam STATE_write_numbers            = 5'd9;
+localparam STATE_IDLE                     = 5'd10;
 
 
 //===ALU_Kommandos============
@@ -80,7 +82,8 @@ always @(*) begin
     wren_zw_in_zahlen_o           = 'b0;        
     wren_erg_modulo_o             = 'b0;    
     wren_Zahl_o                   = 'b0;
-    wren_to_new_numbers_o         = 'b0;        
+    wren_to_new_numbers_o         = 'b0;   
+    wren_initial_o                  = 'b0;     
 
 //===Register-Transfer===
     Zahl1_to_alu_a_o              = 'b0;     
@@ -96,9 +99,14 @@ always @(*) begin
 
         STATE_IDLE: begin
             if (start_r == 1'b1) begin
-                next_state = STATE_find_bigger;
+                next_state = STATE_initial_write;
             end
         end    
+
+        STATE_initial_write: begin
+            next_state = STATE_find_bigger;
+            wren_initial_o = 1'b1;
+        end
 
 
         STATE_find_bigger: begin              //1

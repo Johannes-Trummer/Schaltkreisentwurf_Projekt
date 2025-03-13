@@ -21,7 +21,7 @@ module ggt_top (
     wire modulo_ready, modulo_start;
 
     //===Write-Back-Flags===
-    wire wren_zw_gross, wren_zw_klein, wren_zw_in_zahlen, wren_erg_modulo, wren_Zahl, wren_to_new_numbers;
+    wire wren_zw_gross, wren_zw_klein, wren_zw_in_zahlen, wren_erg_modulo, wren_Zahl, wren_to_new_numbers, wren_initial;
 
     //===Register Transfer===
     wire Zahl1_to_alu_a, Zahl2_to_alu_b; 
@@ -45,6 +45,7 @@ module ggt_top (
         .wren_erg_modulo_o(wren_erg_modulo),
         .wren_Zahl_o(wren_Zahl),
         .wren_to_new_numbers_o(wren_to_new_numbers),
+        .wren_initial_o(wren_initial),
 
         .Zahl1_to_alu_a_o(Zahl1_to_alu_a),
         .Zahl2_to_alu_b_o(Zahl2_to_alu_b),
@@ -71,6 +72,7 @@ module ggt_top (
         .wren_erg_modulo_i(wren_erg_modulo),
         .wren_Zahl_i(wren_Zahl),
         .wren_to_new_numbers_i(wren_to_new_numbers),
+        .wren_initial_i(wren_initial),
 
         .Zahl1_to_alu_a_i(Zahl1_to_alu_a),
         .Zahl2_to_alu_b_i(Zahl2_to_alu_b),

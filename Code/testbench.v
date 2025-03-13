@@ -1,4 +1,4 @@
-//`define SIMULATION;  // Diese Zeile einkommentieren, wenn keine Datei-Handles genutzt werden sollen
+`define SIMULATION;  // Diese Zeile einkommentieren, wenn keine Datei-Handles genutzt werden sollen
 
 
 `ifndef SIMULATION
@@ -6,8 +6,8 @@ module testbench(
     input clk
 );
 
-    reg [15:0] Zahl1;
-    reg [15:0] Zahl2;
+    reg [15:0] Zahl1 = 16'd24255;
+    reg [15:0] Zahl2 = 16'd12540;
     wire [15:0] ergebnis;
     reg start = 'd0;
     reg rst = 'd0;
@@ -15,11 +15,14 @@ module testbench(
 	 wire logic_clk;
 	 wire egal;
 
+	 
+	reg    [15:0] counter_r;
+	
     LEDM MEM1(
 		.address(8'd0),
 		.clock(logic_clk),
-		.data(16'd02),
-		.wren(1'd1),
+		.data(counter_r),
+		.wren(logic_clk),
 		.q(egal) 
 	 );
 
@@ -47,27 +50,30 @@ module testbench(
 	 
 	 ); 
 	 
+	always @ (posedge clk) begin 
+		counter_r <= counter_r + 16'd1; 
+	end 
 
     initial begin
         // Initialwerte setzen
         rst = 1'b1;
         #10 rst = 1'b0;
 
-			Zahl1 = 16'd24255;
-			Zahl2 = 16'd12540;
+			//Zahl1 = 16'd24255;
+			//Zahl2 = 16'd12540;
 
  
             
             // Starte ggT-Berechnung
             start = 1'b1;
-            #10 start = 1'b0;
+            //#10 start = 1'b0;
 
             // Warte auf gültiges Ergebnis
             //wait(valid);
 
         
 
-        $display("Alle Berechnungen abgeschlossen. Ergebnisse gespeichert.");
+        //$display("Alle Berechnungen abgeschlossen. Ergebnisse gespeichert.");
         //$stop;
     end
 endmodule

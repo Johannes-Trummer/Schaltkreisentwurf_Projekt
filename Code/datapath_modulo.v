@@ -27,7 +27,7 @@ module datapath_modulo (
     output wire          valid_o
 );
 
-    reg running = 'd0;
+    //reg running = 'd0;
 
 //===Interne Busse==========================
     reg signed [15:0] 	alu_a_temp, alu_b_temp;
@@ -40,8 +40,8 @@ module datapath_modulo (
 
 //===Variablenregister======================
     reg [15:0]  Zahl1_r, Zahl2_r, Zahl1_temp, Zahl2_temp;
-    reg [15:0]  ergebnis_r, ergebnis_temp, termination_erg_temp, termination_erg_r;
-    reg         start_r;
+    reg [15:0]  ergebnis_r, ergebnis_temp;
+    reg         start_r, termination_erg_temp, termination_erg_r;
 
 //===ALU-Instanziierung==========
 
@@ -103,7 +103,7 @@ always @(*) begin
     end
 
     else if (wren_term_erg) begin
-        termination_erg_temp = wbb;
+        termination_erg_temp = wbb[0];
     end
 
     else if (wren_res_to_erg) begin

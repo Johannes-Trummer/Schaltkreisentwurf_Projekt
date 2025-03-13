@@ -32,9 +32,9 @@ localparam STATE_IDLE       = 4'd7;
 
 
 //===ALU-Kommandos===
-localparam ALU_compare      = 4'd0;
-localparam ALU_Diff         = 4'd1;
-localparam ALU_IDLE         = 4'd2;
+localparam ALU_compare      = 3'd0;
+localparam ALU_Diff         = 3'd1;
+localparam ALU_IDLE         = 3'd2;
 
 //===Schrittregister============
 reg [3:0] 			current_state, next_state;

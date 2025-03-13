@@ -82,15 +82,10 @@ always @(*) begin
 		alu_a_temp 			= 'd0;
 		alu_b_temp 			= 'd0;
 
-    ergebnis_temp           = ergebnis_r;
-    termination_erg_temp    = termination_erg_r;
+		ergebnis_temp           = ergebnis_r;
+		termination_erg_temp    = termination_erg_r;
 
-    if (start_r == 1'd1) begin
-            //Zahl1_r = Zahl1_temp;
-            //Zahl2_r = Zahl2_temp;
-    end
-
-   
+    
 
     //===Write-Back-Flags===
     if (wren_update_Zahlen) begin

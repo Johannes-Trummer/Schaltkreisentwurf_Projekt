@@ -28,18 +28,18 @@ module controller(
 );
 
 //===Schritte================
-localparam STATE_initial_write            = 5'd0;
-localparam STATE_find_bigger              = 5'd1;
-localparam STATE_find_smaller             = 5'd2;
-localparam STATE_write_both               = 5'd3;
-localparam STATE_write_zwischenspeicher   = 5'd4;
+localparam STATE_initial_write            = 4'd0;
+localparam STATE_find_bigger              = 4'd1;
+localparam STATE_find_smaller             = 4'd2;
+localparam STATE_write_both               = 4'd3;
+localparam STATE_write_zwischenspeicher   = 4'd4;
 
-localparam STATE_calc                     = 5'd5; //iterative Schritte des Algorithmus
-localparam STATE_write_erg                = 5'd6;
-localparam STATE_check_if_zero            = 5'd7;
-localparam STATE_write_Zahl               = 5'd8;
-localparam STATE_write_numbers            = 5'd9;
-localparam STATE_IDLE                     = 5'd10;
+localparam STATE_calc                     = 4'd5; //iterative Schritte des Algorithmus
+localparam STATE_write_erg                = 4'd6;
+localparam STATE_check_if_zero            = 4'd7;
+localparam STATE_write_Zahl               = 4'd8;
+localparam STATE_write_numbers            = 4'd9;
+localparam STATE_IDLE                     = 4'd10;
 
 
 //===ALU_Kommandos============
@@ -51,20 +51,22 @@ localparam ALU_IDLE             		= 3'd3;
 
 //===Schrittregister============
 reg [3:0] 			current_state, next_state;
-reg                 start_r; //valid_r;      
+reg                 start_r, valid_r; //valid_r;      
 
 
 
 always @(posedge clk) begin
     if (rst_i) begin
-        //valid_r         <= 1'd0;
+        valid_r         <= 1'd0;
         start_r         <= 1'd0;
         current_state   <= STATE_IDLE;
+        //modulo_ready_r  <= 1'd0;
     end
     else begin
-        //valid_r         <= valid_i;
+        valid_r         <= valid_i;
         start_r         <= start_i;
         current_state   <= next_state;
+        //modulo_ready_r  <= modulo_ready_i;
     end
 end
 

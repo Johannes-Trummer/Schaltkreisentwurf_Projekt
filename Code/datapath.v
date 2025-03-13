@@ -44,7 +44,7 @@ module datapath (
     reg     [15:0]  Zahl1_r, Zahl2_r, Zahl1_temp, Zahl2_temp;
     reg     [15:0]  erg_modulo_temp, erg_modulo_r, erg_zuvor_temp, erg_zuvor_r;
     reg     [15:0]  zwischen_gross_temp, zwischen_gross_r, zwischen_klein_temp, zwischen_klein_r;
-    reg             start_r;           
+    //reg             start_r;           
 
     //===ALU-Instanziierung====================
 
@@ -80,7 +80,7 @@ module datapath (
             zwischen_gross_r    <= zwischen_gross_temp;
             zwischen_klein_r    <= zwischen_klein_temp;
             alu_c_r             <= alu_c;
-            start_r             <= start_i;
+            //start_r             <= start_i;
         end     
     
     end

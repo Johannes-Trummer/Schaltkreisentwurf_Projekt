@@ -1,6 +1,7 @@
 `define SIMULATION;  // Diese Zeile einkommentieren, wenn keine Datei-Handles genutzt werden sollen
 
 
+
 `ifndef SIMULATION
 module testbench(
     input clk
@@ -21,8 +22,8 @@ module testbench(
     LEDM MEM1(
 		.address(8'd0),
 		.clock(logic_clk),
-		.data(counter_r),
-		.wren(logic_clk),
+		.data(ergebnis),
+		.wren(valid),
 		.q(egal) 
 	 );
 

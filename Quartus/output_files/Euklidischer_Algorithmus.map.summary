@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Mar 13 10:00:13 2025
+Analysis & Synthesis Status : Successful - Thu Mar 13 11:16:50 2025
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : Euklidischer_Algorithmus
 Top-level Entity Name : testbench
 Family : MAX 10
-Total logic elements : 244
-    Total combinational functions : 213
-    Dedicated logic registers : 149
-Total registers : 149
+Total logic elements : 616
+    Total combinational functions : 530
+    Dedicated logic registers : 299
+Total registers : 299
 Total pins : 1
 Total virtual pins : 0
 Total memory bits : 4,096

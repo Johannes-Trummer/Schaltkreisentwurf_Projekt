@@ -11,14 +11,15 @@ current_state.STATE_write 0 1 0 0 0 0 0 1
 current_state.STATE_update 1 0 0 0 0 0 0 1 
 
 State Machine - |testbench|ggt_top:TOP|controller:controller|current_state
-Name current_state.STATE_find_bigger current_state.STATE_write_numbers current_state.STATE_write_Zahl current_state.STATE_check_if_zero current_state.STATE_write_erg current_state.STATE_calc current_state.STATE_write_zwischenspeicher current_state.STATE_write_both current_state.STATE_find_smaller current_state.STATE_IDLE 
-current_state.STATE_IDLE 0 0 0 0 0 0 0 0 0 0 
-current_state.STATE_find_smaller 0 0 0 0 0 0 0 0 1 1 
-current_state.STATE_write_both 0 0 0 0 0 0 0 1 0 1 
-current_state.STATE_write_zwischenspeicher 0 0 0 0 0 0 1 0 0 1 
-current_state.STATE_calc 0 0 0 0 0 1 0 0 0 1 
-current_state.STATE_write_erg 0 0 0 0 1 0 0 0 0 1 
-current_state.STATE_check_if_zero 0 0 0 1 0 0 0 0 0 1 
-current_state.STATE_write_Zahl 0 0 1 0 0 0 0 0 0 1 
-current_state.STATE_write_numbers 0 1 0 0 0 0 0 0 0 1 
-current_state.STATE_find_bigger 1 0 0 0 0 0 0 0 0 1 
+Name current_state.STATE_initial_write current_state.STATE_write_numbers current_state.STATE_write_Zahl current_state.STATE_check_if_zero current_state.STATE_write_erg current_state.STATE_calc current_state.STATE_write_zwischenspeicher current_state.STATE_write_both current_state.STATE_find_smaller current_state.STATE_find_bigger current_state.STATE_IDLE 
+current_state.STATE_IDLE 0 0 0 0 0 0 0 0 0 0 0 
+current_state.STATE_find_bigger 0 0 0 0 0 0 0 0 0 1 1 
+current_state.STATE_find_smaller 0 0 0 0 0 0 0 0 1 0 1 
+current_state.STATE_write_both 0 0 0 0 0 0 0 1 0 0 1 
+current_state.STATE_write_zwischenspeicher 0 0 0 0 0 0 1 0 0 0 1 
+current_state.STATE_calc 0 0 0 0 0 1 0 0 0 0 1 
+current_state.STATE_write_erg 0 0 0 0 1 0 0 0 0 0 1 
+current_state.STATE_check_if_zero 0 0 0 1 0 0 0 0 0 0 1 
+current_state.STATE_write_Zahl 0 0 1 0 0 0 0 0 0 0 1 
+current_state.STATE_write_numbers 0 1 0 0 0 0 0 0 0 0 1 
+current_state.STATE_initial_write 1 0 0 0 0 0 0 0 0 0 1 

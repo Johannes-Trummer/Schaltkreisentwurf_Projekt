@@ -76,7 +76,7 @@ always @(*) begin
 
         STATE_IDLE: begin
             
-            if (start_r) begin
+            if (start_r == 1'b1) begin
                 next_state = STATE_update;
             end
         end

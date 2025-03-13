@@ -41,8 +41,9 @@ module datapath_modulo (
 //===Variablenregister======================
     reg [15:0]  Zahl1_r, Zahl2_r, Zahl1_temp, Zahl2_temp;
     reg [15:0]  ergebnis_r, ergebnis_temp;
-    reg         start_r, termination_erg_temp, termination_erg_r;
-
+    reg         termination_erg_temp, termination_erg_r;
+	 //reg 				start_r;
+	 
 //===ALU-Instanziierung==========
 
 alu_modulo alu(
@@ -72,7 +73,7 @@ always @(posedge clk) begin
         termination_erg_r   <= termination_erg_temp;
 
         alu_c_r             <= alu_c;
-        start_r             <= start_i;
+        //start_r             <= start_i;
     end
 end
 

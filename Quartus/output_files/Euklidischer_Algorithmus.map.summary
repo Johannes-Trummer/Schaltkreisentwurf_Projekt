@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Sun Mar  9 16:57:35 2025
+Analysis & Synthesis Status : Successful - Thu Mar 13 08:43:28 2025
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : Euklidischer_Algorithmus
 Top-level Entity Name : testbench
@@ -11,6 +11,6 @@ Total pins : 1
 Total virtual pins : 0
 Total memory bits : 4,096
 Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total PLLs : 1
 UFM blocks : 0
 ADC blocks : 0

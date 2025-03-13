@@ -1,5 +1,5 @@
 Flow report for Euklidischer_Algorithmus
-Sun Mar  9 16:57:50 2025
+Thu Mar 13 08:43:42 2025
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar  9 16:57:47 2025       ;
+; Flow Status                        ; Successful - Thu Mar 13 08:43:39 2025       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; Euklidischer_Algorithmus                    ;
 ; Top-level Entity Name              ; testbench                                   ;
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096 / 387,072 ( 1 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 48 ( 0 % )                              ;
-; Total PLLs                         ; 0 / 1 ( 0 % )                               ;
+; Total PLLs                         ; 1 / 1 ( 100 % )                             ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 0 / 1 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+--------------------------+
 ; Option            ; Setting                  ;
 +-------------------+--------------------------+
-; Start date & time ; 03/09/2025 16:57:13      ;
+; Start date & time ; 03/13/2025 08:43:09      ;
 ; Main task         ; Compilation              ;
 ; Revision Name     ; Euklidischer_Algorithmus ;
 +-------------------+--------------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+--------------------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value            ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+--------------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 58067796024811.174153583309532         ; --                       ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 58067796024811.174185178926840         ; --                       ; --          ; --         ;
 ; ENABLE_SIGNALTAP                    ; On                                     ; --                       ; --          ; --         ;
 ; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off                      ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                       ; --          ; --         ;
@@ -104,12 +104,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4897 MB             ; 00:00:45                           ;
-; Fitter               ; 00:00:05     ; 1.1                     ; 5570 MB             ; 00:00:06                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4724 MB             ; 00:00:02                           ;
-; Power Analyzer       ; 00:00:02     ; 1.1                     ; 4854 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4890 MB             ; 00:00:39                           ;
+; Fitter               ; 00:00:04     ; 1.1                     ; 5570 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4740 MB             ; 00:00:01                           ;
+; Power Analyzer       ; 00:00:02     ; 1.2                     ; 4854 MB             ; 00:00:01                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4863 MB             ; 00:00:02                           ;
-; Total                ; 00:00:32     ; --                      ; --                  ; 00:00:57                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

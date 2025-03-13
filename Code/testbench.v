@@ -13,13 +13,14 @@ module testbench(
     reg rst = 'd0;
     wire valid;
 	 wire logic_clk;
+	 wire egal;
 
     LEDM MEM1(
-		.address(),
-		.clock(),
-		.data(),
-		.wren(),
-		.q() 
+		.address(8'd0),
+		.clock(logic_clk),
+		.data(16'd02),
+		.wren(1'd1),
+		.q(egal) 
 	 );
 
 
@@ -52,6 +53,8 @@ module testbench(
         rst = 1'b1;
         #10 rst = 1'b0;
 
+			Zahl1 = 16'd24255;
+			Zahl2 = 16'd12540;
 
  
             
@@ -60,12 +63,12 @@ module testbench(
             #10 start = 1'b0;
 
             // Warte auf gültiges Ergebnis
-            wait(valid);
+            //wait(valid);
 
         
 
         $display("Alle Berechnungen abgeschlossen. Ergebnisse gespeichert.");
-        $stop;
+        //$stop;
     end
 endmodule
 `endif 

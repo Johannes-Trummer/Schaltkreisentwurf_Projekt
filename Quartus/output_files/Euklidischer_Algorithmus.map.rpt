@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Euklidischer_Algorithmus
-Fri Mar 14 15:54:46 2025
+Fri Mar 14 17:32:31 2025
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -17,22 +17,21 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state
  11. State Machine - |testbench|ggt_top:TOP|controller:controller|current_state
- 12. User-Specified and Inferred Latches
- 13. Registers Removed During Synthesis
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|altsyncram_e272:altsyncram1
- 18. Parameter Settings for User Entity Instance: LEDM:MEM1|altsyncram:altsyncram_component
- 19. Parameter Settings for User Entity Instance: logic_pll:PLL|altpll:altpll_component
- 20. altsyncram Parameter Settings by Entity Instance
- 21. altpll Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "ggt_top:TOP"
- 23. Port Connectivity Checks: "LEDM:MEM1"
- 24. In-System Memory Content Editor Settings
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|altsyncram_e272:altsyncram1
+ 17. Parameter Settings for User Entity Instance: LEDM:MEM1|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: logic_pll:PLL|altpll:altpll_component
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. altpll Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "ggt_top:TOP"
+ 22. Port Connectivity Checks: "LEDM:MEM1"
+ 23. In-System Memory Content Editor Settings
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -59,15 +58,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 14 15:54:46 2025       ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 14 17:32:31 2025       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; Euklidischer_Algorithmus                    ;
 ; Top-level Entity Name              ; testbench                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 614                                         ;
-;     Total combinational functions  ; 528                                         ;
-;     Dedicated logic registers      ; 299                                         ;
-; Total registers                    ; 299                                         ;
+; Total logic elements               ; 582                                         ;
+;     Total combinational functions  ; 448                                         ;
+;     Dedicated logic registers      ; 363                                         ;
+; Total registers                    ; 363                                         ;
 ; Total pins                         ; 1                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -234,20 +233,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                  ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 614                                                                                    ;
+; Estimated Total logic elements              ; 582                                                                                    ;
 ;                                             ;                                                                                        ;
-; Total combinational functions               ; 528                                                                                    ;
+; Total combinational functions               ; 448                                                                                    ;
 ; Logic element usage by number of LUT inputs ;                                                                                        ;
-;     -- 4 input functions                    ; 169                                                                                    ;
-;     -- 3 input functions                    ; 266                                                                                    ;
-;     -- <=2 input functions                  ; 93                                                                                     ;
+;     -- 4 input functions                    ; 136                                                                                    ;
+;     -- 3 input functions                    ; 221                                                                                    ;
+;     -- <=2 input functions                  ; 91                                                                                     ;
 ;                                             ;                                                                                        ;
 ; Logic elements by mode                      ;                                                                                        ;
-;     -- normal mode                          ; 445                                                                                    ;
+;     -- normal mode                          ; 365                                                                                    ;
 ;     -- arithmetic mode                      ; 83                                                                                     ;
 ;                                             ;                                                                                        ;
-; Total registers                             ; 299                                                                                    ;
-;     -- Dedicated logic registers            ; 299                                                                                    ;
+; Total registers                             ; 363                                                                                    ;
+;     -- Dedicated logic registers            ; 363                                                                                    ;
 ;     -- I/O registers                        ; 0                                                                                      ;
 ;                                             ;                                                                                        ;
 ; I/O pins                                    ; 1                                                                                      ;
@@ -259,9 +258,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                      ;
 ;                                             ;                                                                                        ;
 ; Maximum fan-out node                        ; logic_pll:PLL|altpll:altpll_component|logic_pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 183                                                                                    ;
-; Total fan-out                               ; 2764                                                                                   ;
-; Average fan-out                             ; 3.23                                                                                   ;
+; Maximum fan-out                             ; 247                                                                                    ;
+; Total fan-out                               ; 2717                                                                                   ;
+; Average fan-out                             ; 3.24                                                                                   ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 
 
@@ -270,20 +269,20 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |testbench                                                                                                                              ; 528 (1)             ; 299 (0)                   ; 4096        ; 0          ; 0            ; 0       ; 0         ; 1    ; 0            ; 0          ; |testbench                                                                                                                                                                                                                                                                                                                                            ; testbench                         ; work         ;
-;    |LEDM:MEM1|                                                                                                                          ; 74 (0)              ; 47 (0)                    ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1                                                                                                                                                                                                                                                                                                                                  ; LEDM                              ; work         ;
-;       |altsyncram:altsyncram_component|                                                                                                 ; 74 (0)              ; 47 (0)                    ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                  ; altsyncram                        ; work         ;
-;          |altsyncram_6ng1:auto_generated|                                                                                               ; 74 (0)              ; 47 (0)                    ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated                                                                                                                                                                                                                                                                   ; altsyncram_6ng1                   ; work         ;
+; |testbench                                                                                                                              ; 448 (1)             ; 363 (0)                   ; 4096        ; 0          ; 0            ; 0       ; 0         ; 1    ; 0            ; 0          ; |testbench                                                                                                                                                                                                                                                                                                                                            ; testbench                         ; work         ;
+;    |LEDM:MEM1|                                                                                                                          ; 75 (0)              ; 47 (0)                    ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1                                                                                                                                                                                                                                                                                                                                  ; LEDM                              ; work         ;
+;       |altsyncram:altsyncram_component|                                                                                                 ; 75 (0)              ; 47 (0)                    ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                  ; altsyncram                        ; work         ;
+;          |altsyncram_6ng1:auto_generated|                                                                                               ; 75 (0)              ; 47 (0)                    ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated                                                                                                                                                                                                                                                                   ; altsyncram_6ng1                   ; work         ;
 ;             |altsyncram_e272:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|altsyncram_e272:altsyncram1                                                                                                                                                                                                                                       ; altsyncram_e272                   ; work         ;
-;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 74 (52)             ; 47 (38)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                         ; sld_mod_ram_rom                   ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 75 (53)             ; 47 (38)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                         ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 22 (22)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                      ; sld_rom_sr                        ; work         ;
-;    |ggt_top:TOP|                                                                                                                        ; 334 (0)             ; 166 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP                                                                                                                                                                                                                                                                                                                                ; ggt_top                           ; work         ;
-;       |controller:controller|                                                                                                           ; 5 (5)               ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|controller:controller                                                                                                                                                                                                                                                                                                          ; controller                        ; work         ;
-;       |datapath:datapath|                                                                                                               ; 329 (122)           ; 155 (80)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath                                                                                                                                                                                                                                                                                                              ; datapath                          ; work         ;
-;          |alu:alu|                                                                                                                      ; 207 (68)            ; 75 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu                                                                                                                                                                                                                                                                                                      ; alu                               ; work         ;
-;             |modulo_top:modulo|                                                                                                         ; 139 (0)             ; 75 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo                                                                                                                                                                                                                                                                                    ; modulo_top                        ; work         ;
+;    |ggt_top:TOP|                                                                                                                        ; 253 (0)             ; 230 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP                                                                                                                                                                                                                                                                                                                                ; ggt_top                           ; work         ;
+;       |controller:controller|                                                                                                           ; 6 (6)               ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|controller:controller                                                                                                                                                                                                                                                                                                          ; controller                        ; work         ;
+;       |datapath:datapath|                                                                                                               ; 247 (73)            ; 219 (112)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath                                                                                                                                                                                                                                                                                                              ; datapath                          ; work         ;
+;          |alu:alu|                                                                                                                      ; 174 (67)            ; 107 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu                                                                                                                                                                                                                                                                                                      ; alu                               ; work         ;
+;             |modulo_top:modulo|                                                                                                         ; 107 (0)             ; 107 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo                                                                                                                                                                                                                                                                                    ; modulo_top                        ; work         ;
 ;                |controller_modulo:controller|                                                                                           ; 9 (9)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller                                                                                                                                                                                                                                                       ; controller_modulo                 ; work         ;
-;                |datapath_modulo:datapath|                                                                                               ; 130 (82)            ; 65 (65)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath                                                                                                                                                                                                                                                           ; datapath_modulo                   ; work         ;
+;                |datapath_modulo:datapath|                                                                                               ; 98 (50)             ; 97 (97)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath                                                                                                                                                                                                                                                           ; datapath_modulo                   ; work         ;
 ;                   |alu_modulo:alu|                                                                                                      ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_modulo:alu                                                                                                                                                                                                                                            ; alu_modulo                        ; work         ;
 ;    |logic_pll:PLL|                                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|logic_pll:PLL                                                                                                                                                                                                                                                                                                                              ; logic_pll                         ; work         ;
 ;       |altpll:altpll_component|                                                                                                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |testbench|logic_pll:PLL|altpll:altpll_component                                                                                                                                                                                                                                                                                                      ; altpll                            ; work         ;
@@ -361,98 +360,23 @@ Encoding Type:  One-Hot
 +--------------------------------------------+-----------------------------------+-----------------------------------+--------------------------------+-----------------------------------+-------------------------------+--------------------------+--------------------------------------------+--------------------------------+----------------------------------+---------------------------------+--------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                                                                                                                     ;
-+----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+------------------------+
-; Latch Name                                                                                   ; Latch Enable Signal                                                                                             ; Free of Timing Hazards ;
-+----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+------------------------+
-; ggt_top:TOP|datapath:datapath|Zahl2_r[0]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[15]                                                    ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[15]                                                    ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[14]                                                    ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[14]                                                    ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[13]                                                    ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[13]                                                    ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[12]                                                    ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[12]                                                    ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[11]                                                    ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[11]                                                    ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[10]                                                    ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[10]                                                    ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[9]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[9]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[8]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[8]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[7]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[7]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[6]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[6]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[5]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[5]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[4]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[4]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[3]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[3]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[2]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[2]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[1]                                                     ; ggt_top:TOP|datapath:datapath|Zahl1_r[0]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                     ; ggt_top:TOP|datapath:datapath|Zahl2_r[1]                                                                        ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[0]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[1]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[2]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[3]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[4]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[5]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[6]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[7]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[8]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[9]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[10] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[11] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[12] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[13] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[14] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[15] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[15] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[14] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[13] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[12] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[11] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[10] ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[9]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[8]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[7]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[6]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[5]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[4]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[3]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[2]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[1]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl2_r[0]  ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update ; yes                    ;
-; Number of user-specified and inferred latches = 64                                           ;                                                                                                                 ;                        ;
-+----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                                                            ;
 +------------------------------------------------------------------------------------------------------+----------------------------------------+
 ; Register name                                                                                        ; Reason for Removal                     ;
 +------------------------------------------------------------------------------------------------------+----------------------------------------+
-; ggt_top:TOP|datapath:datapath|Zahl2_temp[0,1]                                                        ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_temp[2..7]                                                       ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_temp[8..11]                                                      ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_temp[12,13]                                                      ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_temp[14,15]                                                      ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_temp[0..5]                                                       ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_temp[6]                                                          ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_temp[7]                                                          ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_temp[8]                                                          ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_temp[9..12]                                                      ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_temp[13]                                                         ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_temp[14]                                                         ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_temp[15]                                                         ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[0,1]                                                         ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[2]                                                           ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[3,4]                                                         ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[5,6]                                                         ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[7]                                                           ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[8]                                                           ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[9..15]                                                       ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[0]                                                           ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[1..3]                                                        ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[4]                                                           ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[5..7]                                                        ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[8..15]                                                       ; Stuck at GND due to stuck port data_in ;
 ; ggt_top:TOP|controller:controller|start_r                                                            ; Stuck at VCC due to stuck port data_in ;
 ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~2 ; Lost fanout                            ;
 ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~3 ; Lost fanout                            ;
@@ -471,12 +395,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 299   ;
-; Number of registers using Synchronous Clear  ; 17    ;
-; Number of registers using Synchronous Load   ; 18    ;
+; Total registers                              ; 363   ;
+; Number of registers using Synchronous Clear  ; 39    ;
+; Number of registers using Synchronous Load   ; 28    ;
 ; Number of registers using Asynchronous Clear ; 55    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 178   ;
+; Number of registers using Clock Enable       ; 242   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -497,16 +421,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[1]                                                                        ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |testbench|ggt_top:TOP|datapath:datapath|erg_zuvor_r[2]                                                                                                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|ergebnis_r[0]                                                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |testbench|ggt_top:TOP|datapath:datapath|erg_zuvor_r[0]                                                                                                                          ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[14]                                               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[5]                                                ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |testbench|ggt_top:TOP|datapath:datapath|Zahl1_r[4]                                                                                                                              ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |testbench|ggt_top:TOP|datapath:datapath|Zahl2_r[14]                                                                                                                             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
 ; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |testbench|ggt_top:TOP|datapath:datapath|alu_c_r[7]                                                                                                                              ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |testbench|ggt_top:TOP|datapath:datapath|Zahl2_r[5]                                                                                                                              ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |testbench|ggt_top:TOP|datapath:datapath|Zahl1_r[10]                                                                                                                             ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|next_state.STATE_IDLE                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -992,27 +916,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+---------------------------------------+
 
 
-+---------------------------------------------------+
-; Port Connectivity Checks: "ggt_top:TOP"           ;
-+-----------------+-------+----------+--------------+
-; Port            ; Type  ; Severity ; Details      ;
-+-----------------+-------+----------+--------------+
-; rst_i           ; Input ; Info     ; Stuck at GND ;
-; start_i         ; Input ; Info     ; Stuck at VCC ;
-; Zahl1_i[12..9]  ; Input ; Info     ; Stuck at VCC ;
-; Zahl1_i[5..0]   ; Input ; Info     ; Stuck at VCC ;
-; Zahl1_i[15]     ; Input ; Info     ; Stuck at GND ;
-; Zahl1_i[14]     ; Input ; Info     ; Stuck at VCC ;
-; Zahl1_i[13]     ; Input ; Info     ; Stuck at GND ;
-; Zahl1_i[8]      ; Input ; Info     ; Stuck at GND ;
-; Zahl1_i[7]      ; Input ; Info     ; Stuck at VCC ;
-; Zahl1_i[6]      ; Input ; Info     ; Stuck at GND ;
-; Zahl2_i[13..12] ; Input ; Info     ; Stuck at VCC ;
-; Zahl2_i[7..2]   ; Input ; Info     ; Stuck at VCC ;
-; Zahl2_i[15..14] ; Input ; Info     ; Stuck at GND ;
-; Zahl2_i[11..8]  ; Input ; Info     ; Stuck at GND ;
-; Zahl2_i[1..0]   ; Input ; Info     ; Stuck at GND ;
-+-----------------+-------+----------+--------------+
++--------------------------------------------------+
+; Port Connectivity Checks: "ggt_top:TOP"          ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; rst_i          ; Input ; Info     ; Stuck at GND ;
+; start_i        ; Input ; Info     ; Stuck at VCC ;
+; Zahl1_i[7..5]  ; Input ; Info     ; Stuck at VCC ;
+; Zahl1_i[3..1]  ; Input ; Info     ; Stuck at VCC ;
+; Zahl1_i[15..8] ; Input ; Info     ; Stuck at GND ;
+; Zahl1_i[4]     ; Input ; Info     ; Stuck at GND ;
+; Zahl1_i[0]     ; Input ; Info     ; Stuck at GND ;
+; Zahl2_i[6..5]  ; Input ; Info     ; Stuck at VCC ;
+; Zahl2_i[15..9] ; Input ; Info     ; Stuck at GND ;
+; Zahl2_i[4..3]  ; Input ; Info     ; Stuck at GND ;
+; Zahl2_i[1..0]  ; Input ; Info     ; Stuck at GND ;
+; Zahl2_i[8]     ; Input ; Info     ; Stuck at VCC ;
+; Zahl2_i[7]     ; Input ; Info     ; Stuck at GND ;
+; Zahl2_i[2]     ; Input ; Info     ; Stuck at VCC ;
++----------------+-------+----------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1041,28 +964,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 213                         ;
+; cycloneiii_ff         ; 277                         ;
 ;     CLR               ; 7                           ;
-;     ENA               ; 100                         ;
+;     ENA               ; 132                         ;
 ;     ENA CLR           ; 7                           ;
 ;     ENA CLR SLD       ; 8                           ;
-;     ENA SCLR          ; 5                           ;
+;     ENA SCLR          ; 27                          ;
+;     ENA SLD           ; 10                          ;
 ;     plain             ; 86                          ;
-; cycloneiii_lcell_comb ; 409                         ;
+; cycloneiii_lcell_comb ; 329                         ;
 ;     arith             ; 75                          ;
 ;         2 data inputs ; 15                          ;
 ;         3 data inputs ; 60                          ;
-;     normal            ; 334                         ;
+;     normal            ; 254                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 35                          ;
-;         3 data inputs ; 176                         ;
-;         4 data inputs ; 117                         ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 131                         ;
+;         4 data inputs ; 84                          ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.50                        ;
-; Average LUT depth     ; 2.80                        ;
+; Max LUT depth         ; 7.50                        ;
+; Average LUT depth     ; 3.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1081,7 +1005,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Mar 14 15:54:26 2025
+    Info: Processing started: Fri Mar 14 17:32:10 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Euklidischer_Algorithmus -c Euklidischer_Algorithmus
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /users/jotru/desktop/projekt_se/schaltkreisentwurf_projekt/code/testbench.v
@@ -1150,78 +1074,10 @@ Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "LEDM:MEM1|altsyncra
 Info (12128): Elaborating entity "ggt_top" for hierarchy "ggt_top:TOP" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 46
 Info (12128): Elaborating entity "controller" for hierarchy "ggt_top:TOP|controller:controller" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/ggt_top.v Line: 58
 Info (12128): Elaborating entity "datapath" for hierarchy "ggt_top:TOP|datapath:datapath" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/ggt_top.v Line: 88
-Warning (10240): Verilog HDL Always Construct warning at datapath.v(87): inferring latch(es) for variable "Zahl1_r", which holds its previous value in one or more paths through the always construct File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 87
-Warning (10240): Verilog HDL Always Construct warning at datapath.v(87): inferring latch(es) for variable "Zahl2_r", which holds its previous value in one or more paths through the always construct File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 87
-Info (10041): Inferred latch for "Zahl2_r[0]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[1]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[2]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[3]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[4]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[5]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[6]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[7]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[8]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[9]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[10]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[11]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[12]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[13]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[14]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl2_r[15]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[0]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[1]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[2]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[3]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[4]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[5]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[6]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[7]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[8]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[9]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[10]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[11]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[12]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[13]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[14]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-Info (10041): Inferred latch for "Zahl1_r[15]" at datapath.v(125) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
 Info (12128): Elaborating entity "alu" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 61
 Info (12128): Elaborating entity "modulo_top" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/alu.v Line: 28
 Info (12128): Elaborating entity "controller_modulo" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v Line: 39
 Info (12128): Elaborating entity "datapath_modulo" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/modulo_top.v Line: 64
-Warning (10240): Verilog HDL Always Construct warning at datapath_modulo.v(80): inferring latch(es) for variable "Zahl1_r", which holds its previous value in one or more paths through the always construct File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 80
-Warning (10240): Verilog HDL Always Construct warning at datapath_modulo.v(80): inferring latch(es) for variable "Zahl2_r", which holds its previous value in one or more paths through the always construct File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 80
-Info (10041): Inferred latch for "Zahl2_r[0]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[1]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[2]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[3]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[4]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[5]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[6]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[7]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[8]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[9]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[10]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[11]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[12]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[13]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[14]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl2_r[15]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[0]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[1]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[2]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[3]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[4]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[5]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[6]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[7]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[8]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[9]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[10]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[11]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[12]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[13]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[14]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
-Info (10041): Inferred latch for "Zahl1_r[15]" at datapath_modulo.v(89) File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 89
 Info (12128): Elaborating entity "alu_modulo" for hierarchy "ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_modulo:alu" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath_modulo.v Line: 57
 Info (12128): Elaborating entity "logic_pll" for hierarchy "logic_pll:PLL" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/testbench.v Line: 52
 Info (12128): Elaborating entity "altpll" for hierarchy "logic_pll:PLL|altpll:altpll_component" File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/logic_pll.v Line: 91
@@ -1285,7 +1141,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/logi
     Info (12023): Found entity 1: logic_pll_altpll File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/db/logic_pll_altpll.v Line: 30
 Info (12128): Elaborating entity "logic_pll_altpll" for hierarchy "logic_pll:PLL|altpll:altpll_component|logic_pll_altpll:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.03.14.15:54:38 Progress: Loading sld680e4599/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.03.14.17:32:22 Progress: Loading sld680e4599/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1309,84 +1165,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld680e4599/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/db/ip/sld680e4599/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[0] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[0] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[15] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[15] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[14] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[14] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[13] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[13] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[12] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[12] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[11] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[11] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[10] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[10] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[9] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[9] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[8] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[8] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[7] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[7] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[6] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[6] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[5] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[5] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[4] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[4] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[3] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[3] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[2] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[2] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl1_r[1] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
-Warning (13012): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[1] has unsafe behavior File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/datapath.v Line: 125
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ggt_top:TOP|controller:controller|current_state.STATE_initial_write File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Code/controller.v Line: 53
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 673 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 657 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 650 logic cells
+    Info (21061): Implemented 634 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4890 megabytes
-    Info: Processing ended: Fri Mar 14 15:54:46 2025
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Processing ended: Fri Mar 14 17:32:31 2025
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:45
 
 

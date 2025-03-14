@@ -96,6 +96,9 @@ module datapath (
         zwischen_gross_temp = zwischen_gross_r;
         zwischen_klein_temp = zwischen_klein_r;
 
+        Zahl1_temp = Zahl1_r;
+        Zahl2_temp = Zahl2_r;
+
         
         //===Write-Back-Logic==========
         if (wren_zw_gross_i) begin

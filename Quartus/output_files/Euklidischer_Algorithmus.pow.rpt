@@ -1,5 +1,5 @@
 Power Analyzer report for Euklidischer_Algorithmus
-Fri Mar 14 15:54:59 2025
+Fri Mar 14 17:32:43 2025
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -53,27 +53,27 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.32        ;
+; Average used               ; 1.33        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  10.6%      ;
+;     Processors 2-4         ;  11.0%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                  ; Successful - Fri Mar 14 15:54:59 2025            ;
+; Power Analyzer Status                  ; Successful - Fri Mar 14 17:32:43 2025            ;
 ; Quartus Prime Version                  ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition      ;
 ; Revision Name                          ; Euklidischer_Algorithmus                         ;
 ; Top-level Entity Name                  ; testbench                                        ;
 ; Family                                 ; MAX 10                                           ;
 ; Device                                 ; 10M08SAU169C8G                                   ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 131.44 mW                                        ;
-; Core Dynamic Thermal Power Dissipation ; 1.17 mW                                          ;
+; Total Thermal Power Dissipation        ; 131.57 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 1.30 mW                                          ;
 ; Core Static Thermal Power Dissipation  ; 121.02 mW                                        ;
 ; I/O Thermal Power Dissipation          ; 9.25 mW                                          ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
@@ -107,18 +107,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+---------------------------------------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Indeterminate Toggle Rates                                                                                                                            ;
-+-------------------------------------------------------------------------------------------------------------------------+-----------------------------+
-; Node                                                                                                                    ; Reason                      ;
-+-------------------------------------------------------------------------------------------------------------------------+-----------------------------+
-; logic_pll:PLL|altpll:altpll_component|logic_pll_altpll:auto_generated|wire_pll1_clk[0]                                  ; No valid clock domain found ;
-; clk                                                                                                                     ; No valid clock domain found ;
-; ggt_top:TOP|datapath:datapath|Zahl2_r[1]~3clkctrl                                                                       ; No valid clock domain found ;
-; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update~clkctrl ; No valid clock domain found ;
-; logic_pll:PLL|altpll:altpll_component|logic_pll_altpll:auto_generated|wire_pll1_clk[0]~clkctrl                          ; No valid clock domain found ;
-; ggt_top:TOP|datapath:datapath|Zahl1_r[0]~1clkctrl                                                                       ; No valid clock domain found ;
-+-------------------------------------------------------------------------------------------------------------------------+-----------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Indeterminate Toggle Rates                                                                                                   ;
++------------------------------------------------------------------------------------------------+-----------------------------+
+; Node                                                                                           ; Reason                      ;
++------------------------------------------------------------------------------------------------+-----------------------------+
+; logic_pll:PLL|altpll:altpll_component|logic_pll_altpll:auto_generated|wire_pll1_clk[0]         ; No valid clock domain found ;
+; clk                                                                                            ; No valid clock domain found ;
+; logic_pll:PLL|altpll:altpll_component|logic_pll_altpll:auto_generated|wire_pll1_clk[0]~clkctrl ; No valid clock domain found ;
++------------------------------------------------------------------------------------------------+-----------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -160,11 +157,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 ; JTAG                ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    6.875                                                  ;
 ; M9K                 ; 0.09 mW                           ; 0.09 mW                     ; --                             ; 0.00 mW                       ;    0.625                                                  ;
-; Combinational cell  ; 0.04 mW                           ; 0.03 mW                     ; --                             ; 0.01 mW                       ;    0.350                                                  ;
-; Clock control block ; 0.20 mW                           ; 0.00 mW                     ; --                             ; 0.20 mW                       ;    4.000                                                  ;
-; Register cell       ; 0.13 mW                           ; 0.09 mW                     ; --                             ; 0.04 mW                       ;    0.551                                                  ;
+; Combinational cell  ; 0.04 mW                           ; 0.03 mW                     ; --                             ; 0.01 mW                       ;    0.377                                                  ;
+; Clock control block ; 0.23 mW                           ; 0.00 mW                     ; --                             ; 0.23 mW                       ;   10.000                                                  ;
+; Register cell       ; 0.15 mW                           ; 0.10 mW                     ; --                             ; 0.04 mW                       ;    0.454                                                  ;
 ; I/O                 ; 0.22 mW                           ; 0.15 mW                     ; 0.07 mW                        ; 0.00 mW                       ;    3.056                                                  ;
-; Voltage Regulator   ; 1.46 mW                           ; 0.71 mW                     ; 0.76 mW                        ; --                            ; --                                                        ;
+; Voltage Regulator   ; 1.54 mW                           ; 0.78 mW                     ; 0.76 mW                        ; --                            ; --                                                        ;
 +---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
@@ -174,10 +171,10 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Compilation Hierarchy Node                                                                                                               ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ;
 +------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; |testbench                                                                                                                               ; 2.15 mW (1.89 mW)                    ; 1.06 mW (0.85 mW)               ; 0.83 mW (0.83 mW)                 ; 0.25 mW (0.20 mW)                 ; |testbench                                                                                                                                                                                                                                                                                                                                            ;
-;     |LEDM:MEM1                                                                                                                           ; 0.15 mW (0.00 mW)                    ; 0.12 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |testbench|LEDM:MEM1                                                                                                                                                                                                                                                                                                                                  ;
-;         |altsyncram:altsyncram_component                                                                                                 ; 0.15 mW (0.00 mW)                    ; 0.12 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                  ;
-;             |altsyncram_6ng1:auto_generated                                                                                              ; 0.15 mW (0.00 mW)                    ; 0.12 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated                                                                                                                                                                                                                                                                   ;
+; |testbench                                                                                                                               ; 2.28 mW (2.00 mW)                    ; 1.15 mW (0.93 mW)               ; 0.83 mW (0.83 mW)                 ; 0.29 mW (0.24 mW)                 ; |testbench                                                                                                                                                                                                                                                                                                                                            ;
+;     |LEDM:MEM1                                                                                                                           ; 0.15 mW (0.00 mW)                    ; 0.13 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |testbench|LEDM:MEM1                                                                                                                                                                                                                                                                                                                                  ;
+;         |altsyncram:altsyncram_component                                                                                                 ; 0.15 mW (0.00 mW)                    ; 0.13 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                  ;
+;             |altsyncram_6ng1:auto_generated                                                                                              ; 0.15 mW (0.00 mW)                    ; 0.13 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated                                                                                                                                                                                                                                                                   ;
 ;                 |altsyncram_e272:altsyncram1                                                                                             ; 0.09 mW (0.09 mW)                    ; 0.09 mW (0.09 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|altsyncram_e272:altsyncram1                                                                                                                                                                                                                                       ;
 ;                 |sld_mod_ram_rom:mgl_prim2                                                                                               ; 0.06 mW (0.05 mW)                    ; 0.04 mW (0.03 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                         ;
 ;                     |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                  ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |testbench|LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                      ;
@@ -194,12 +191,12 @@ https://fpgasoftware.intel.com/eula.
 ;                     |datapath_modulo:datapath                                                                                            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath                                                                                                                                                                                                                                                           ;
 ;                         |alu_modulo:alu                                                                                                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |testbench|ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|alu_modulo:alu                                                                                                                                                                                                                                            ;
 ;     |hard_block:auto_generated_inst                                                                                                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |testbench|hard_block:auto_generated_inst                                                                                                                                                                                                                                                                                                             ;
-;     |sld_hub:auto_hub                                                                                                                    ; 0.12 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ;
-;         |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric ; 0.12 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ;
-;             |alt_sld_fab:instrumentation_fabric                                                                                          ; 0.12 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ;
-;                 |alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                     ; 0.12 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ;
-;                     |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                         ; 0.11 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ;
-;                         |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                                                    ; 0.11 mW (0.07 mW)                    ; 0.09 mW (0.06 mW)               ; --                                ; 0.03 mW (0.02 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ;
+;     |sld_hub:auto_hub                                                                                                                    ; 0.13 mW (0.00 mW)                    ; 0.10 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ;
+;         |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric ; 0.13 mW (0.00 mW)                    ; 0.10 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ;
+;             |alt_sld_fab:instrumentation_fabric                                                                                          ; 0.13 mW (0.00 mW)                    ; 0.10 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ;
+;                 |alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                     ; 0.13 mW (0.00 mW)                    ; 0.10 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ;
+;                     |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                         ; 0.12 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ;
+;                         |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                                                    ; 0.12 mW (0.08 mW)                    ; 0.09 mW (0.06 mW)               ; --                                ; 0.03 mW (0.02 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ;
 ;                             |sld_rom_sr:hub_info_reg                                                                                     ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ;
 ;                             |sld_shadow_jsm:shadow_jsm                                                                                   ; 0.03 mW (0.03 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |testbench|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ;
 ;         |sld_jtag_interface_mod:\jtag_interface_mod_gen:device_family_mod_inst                                                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |testbench|sld_hub:auto_hub|sld_jtag_interface_mod:\jtag_interface_mod_gen:device_family_mod_inst                                                                                                                                                                                                                                                     ;
@@ -214,7 +211,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------+-----------------------+--------------------------+
 ; Clock Domain        ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
 +---------------------+-----------------------+--------------------------+
-; altera_reserved_tck ; 10.00                 ; 0.37                     ;
+; altera_reserved_tck ; 10.00                 ; 0.42                     ;
 ; No clock domain     ; 0.00                  ; 0.09                     ;
 +---------------------+-----------------------+--------------------------+
 
@@ -226,7 +223,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; VCCIO          ; 3.19 mA                 ; 0.05 mA                   ; 3.14 mA                  ; 3.19 mA                          ;
 ; VCCA           ; 3.02 mA                 ; 0.00 mA                   ; 3.02 mA                  ; 3.02 mA                          ;
-; VCC_ONE        ; 37.71 mA                ; 0.39 mA                   ; 37.31 mA                 ; 37.71 mA                         ;
+; VCC_ONE        ; 37.75 mA                ; 0.43 mA                   ; 37.31 mA                 ; 37.75 mA                         ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -272,16 +269,16 @@ https://fpgasoftware.intel.com/eula.
 ;                                                                                        ;             ;           ;              ;               ;
 ; Node, entity or clock assignment                                                       ;             ;           ;              ;               ;
 ;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 2 (0.2%)    ; 1 (11.1%) ; 0 (0.0%)     ; 1 (0.2%)      ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 6 (0.6%)    ; 1 (11.1%) ; 0 (0.0%)     ; 5 (0.8%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 3 (0.3%)    ; 1 (11.1%) ; 0 (0.0%)     ; 2 (0.3%)      ;
 ;                                                                                        ;             ;           ;              ;               ;
 ; Vectorless estimation                                                                  ;             ;           ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 924 (98.9%) ; 1 (11.1%) ; 297 (100.0%) ; 626 (99.7%)   ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 5 (0.5%)    ; 0 (0.0%)  ; 0 (0.0%)     ; 5 (0.8%)      ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 920 (98.5%) ; 1 (11.1%) ; 297 (100.0%) ; 622 (99.0%)   ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 945 (99.0%) ; 1 (11.1%) ; 361 (100.0%) ; 583 (99.7%)   ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 5 (0.5%)    ; 0 (0.0%)  ; 0 (0.0%)     ; 5 (0.9%)      ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 944 (98.8%) ; 1 (11.1%) ; 361 (100.0%) ; 582 (99.5%)   ;
 ;                                                                                        ;             ;           ;              ;               ;
 ; Default assignment                                                                     ;             ;           ;              ;               ;
 ;     -- Number of signals with Toggle Rate from Default assignment                      ; 2 (0.2%)    ; 2 (22.2%) ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 8 (0.9%)    ; 7 (77.8%) ; 0 (0.0%)     ; 1 (0.2%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 8 (0.8%)    ; 7 (77.8%) ; 0 (0.0%)     ; 1 (0.2%)      ;
 ;                                                                                        ;             ;           ;              ;               ;
 ; Assumed 0                                                                              ;             ;           ;              ;               ;
 ;     -- Number of signals with Toggle Rate assumed 0                                    ; 6 (0.6%)    ; 5 (55.6%) ; 0 (0.0%)     ; 1 (0.2%)      ;
@@ -302,11 +299,10 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Mar 14 15:54:57 2025
+    Info: Processing started: Fri Mar 14 17:32:41 2025
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off Euklidischer_Algorithmus -c Euklidischer_Algorithmus
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 64 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Info (332164): Evaluating HDL-embedded SDC commands
     Info (332165): Entity sld_hub
         Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
@@ -314,10 +310,6 @@ Info (332164): Evaluating HDL-embedded SDC commands
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Euklidischer_Algorithmus.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register LEDM:MEM1|altsyncram:altsyncram_component|altsyncram_6ng1:auto_generated|altsyncram_e272:altsyncram1|ram_block3a0~porta_we_reg is being clocked by clk
-Warning (332060): Node: ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|datapath_modulo:datapath|Zahl1_r[1] is being clocked by ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state.STATE_update
-Warning (332060): Node: ggt_top:TOP|controller:controller|current_state.STATE_initial_write was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch ggt_top:TOP|datapath:datapath|Zahl2_r[0] is being clocked by ggt_top:TOP|controller:controller|current_state.STATE_initial_write
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
@@ -331,11 +323,11 @@ Info (223001): Completed Vectorless Power Activity Estimation
 Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (215049): Average toggle rate for this design is 0.492 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 131.44 mW
-Info: Quartus Prime Power Analyzer was successful. 0 errors, 11 warnings
+Info (215049): Average toggle rate for this design is 0.482 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 131.57 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 4861 megabytes
-    Info: Processing ended: Fri Mar 14 15:54:59 2025
+    Info: Processing ended: Fri Mar 14 17:32:43 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

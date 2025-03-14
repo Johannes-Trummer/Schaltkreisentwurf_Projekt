@@ -85,7 +85,7 @@ always @(*) begin
     wren_erg_modulo_o             = 'b0;    
     wren_Zahl_o                   = 'b0;
     wren_to_new_numbers_o         = 'b0;   
-    wren_initial_o                  = 'b0;     
+    wren_initial_o                = 'b0;     
 
 //===Register-Transfer===
     Zahl1_to_alu_a_o              = 'b0;     

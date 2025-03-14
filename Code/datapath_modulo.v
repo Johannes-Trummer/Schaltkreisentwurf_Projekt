@@ -89,8 +89,9 @@ always @(*) begin
 		ergebnis_temp           = ergebnis_r;
 		termination_erg_temp    = termination_erg_r;
 
-    
-
+        Zahl1_temp = Zahl1_r;
+        Zahl2_temp = Zahl2_r;
+        
     //===Write-Back-Flags===
     if (wren_update_Zahlen) begin
         Zahl1_temp = Zahl1_i_r;

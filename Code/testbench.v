@@ -7,8 +7,8 @@ module testbench(
     input clk
 );
 
-    reg [15:0] Zahl1 = 16'd24255;
-    reg [15:0] Zahl2 = 16'd12540;
+    reg [15:0] Zahl1 = 16'd238;
+    reg [15:0] Zahl2 = 16'd356;
     wire [15:0] ergebnis;
     reg start = 'd0;
     reg rst = 'd0;
@@ -51,14 +51,14 @@ module testbench(
 	 
 	 ); 
 	 
-	always @ (posedge clk) begin 
+	always @ (posedge logic_clk) begin 
 		counter_r <= counter_r + 16'd1; 
 	end 
 
     initial begin
         // Initialwerte setzen
-        rst = 1'b1;
-        #10 rst = 1'b0;
+        //rst = 1'b1;
+        //#10 rst = 1'b0;
 
 			//Zahl1 = 16'd24255;
 			//Zahl2 = 16'd12540;

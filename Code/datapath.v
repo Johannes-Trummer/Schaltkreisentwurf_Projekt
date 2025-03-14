@@ -41,7 +41,7 @@ module datapath (
     wire 	signed [15:0] alu_c;
 
     //===Variablenregister=======================
-    reg     [15:0]  Zahl1_r, Zahl2_r, Zahl1_temp, Zahl2_temp;
+    reg     [15:0]  Zahl1_r, Zahl2_r, Zahl1_i_r, Zahl2_i_r, Zahl1_temp, Zahl2_temp;
     reg     [15:0]  erg_modulo_temp, erg_modulo_r, erg_zuvor_temp, erg_zuvor_r;
     reg     [15:0]  zwischen_gross_temp, zwischen_gross_r, zwischen_klein_temp, zwischen_klein_r;
     //reg             start_r;           
@@ -63,20 +63,24 @@ module datapath (
 
     always @(posedge clk) begin
         if (rst_i) begin
-            Zahl1_temp          <= 'd0;
-            Zahl2_temp          <= 'd0;
+            Zahl1_i_r          <= 'd0;
+            Zahl2_i_r          <= 'd0;
             erg_modulo_r        <= 'd0;
             zwischen_gross_r    <= 'd0;
             zwischen_klein_r    <= 'd0;
             alu_c_r             <= 'd0;
+            Zahl1_r             <= 'd0;
+            Zahl2_r             <= 'd0;
         end else begin
-            Zahl1_temp          <= Zahl1_i;
-            Zahl2_temp          <= Zahl2_i;
+            Zahl1_i_r          <= Zahl1_i;
+            Zahl2_i_r          <= Zahl2_i;
             erg_modulo_r        <= erg_modulo_temp;
             erg_zuvor_r         <= erg_zuvor_temp;
             zwischen_gross_r    <= zwischen_gross_temp;
             zwischen_klein_r    <= zwischen_klein_temp;
             alu_c_r             <= alu_c;
+            Zahl1_r             <= Zahl1_temp;
+            Zahl2_r             <= Zahl2_temp;
         end     
     
     end
@@ -103,8 +107,8 @@ module datapath (
         end
 
         if (wren_zw_in_zahlen_i) begin
-            Zahl1_r         = zwischen_gross_r;
-            Zahl2_r         = zwischen_klein_r;
+            Zahl1_temp         = zwischen_gross_r;
+            Zahl2_temp         = zwischen_klein_r;
             erg_zuvor_temp     = zwischen_klein_r;
         end
 
@@ -113,18 +117,18 @@ module datapath (
         end
 
         if (wren_Zahl_i) begin
-            Zahl1_r = Zahl2_r;
+            Zahl1_temp = Zahl2_r;
         end
 
         if (wren_to_new_numbers_i) begin
             
-            Zahl2_r = erg_modulo_r;
+            Zahl2_temp = erg_modulo_r;
             erg_zuvor_temp = erg_modulo_r;
 
         end
         if (wren_initial_i) begin
-            Zahl1_r = Zahl1_temp;
-            Zahl2_r = Zahl2_temp;
+            Zahl1_temp = Zahl1_i_r;
+            Zahl2_temp = Zahl2_i_r;
         end
 
         //===Register-Transfer-Logic===

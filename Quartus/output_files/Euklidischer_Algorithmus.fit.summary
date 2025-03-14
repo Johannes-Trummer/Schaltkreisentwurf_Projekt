@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Mar 14 17:32:37 2025
+Fitter Status : Successful - Fri Mar 14 19:55:49 2025
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : Euklidischer_Algorithmus
 Top-level Entity Name : testbench
 Family : MAX 10
 Device : 10M08SAU169C8G
 Timing Models : Final
-Total logic elements : 547 / 8,064 ( 7 % )
+Total logic elements : 550 / 8,064 ( 7 % )
     Total combinational functions : 449 / 8,064 ( 6 % )
     Dedicated logic registers : 363 / 8,064 ( 5 % )
 Total registers : 363

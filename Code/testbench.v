@@ -1,4 +1,4 @@
-`define SIMULATION;  // Diese Zeile einkommentieren, wenn keine Datei-Handles genutzt werden sollen
+//`define SIMULATION;  // Diese Zeile einkommentieren, wenn keine Datei-Handles genutzt werden sollen
 
 
 
@@ -7,8 +7,8 @@ module testbench(
     input clk
 );
 
-    reg [15:0] Zahl1 = 16'd238;
-    reg [15:0] Zahl2 = 16'd356;
+    reg [15:0] Zahl1 = 16'd90;
+    reg [15:0] Zahl2 = 16'd180;
     wire [15:0] ergebnis;
     reg start = 'd0;
     reg rst = 'd0;

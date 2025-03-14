@@ -65,10 +65,7 @@ module datapath (
         if (rst_i) begin
             Zahl1_temp          <= 'd0;
             Zahl2_temp          <= 'd0;
-            //Zahl1_r             <= 'd0;
-            //Zahl2_r             <= 'd0;
             erg_modulo_r        <= 'd0;
-            //erg_zuvor_r         <= 'd0;
             zwischen_gross_r    <= 'd0;
             zwischen_klein_r    <= 'd0;
             alu_c_r             <= 'd0;
@@ -80,7 +77,6 @@ module datapath (
             zwischen_gross_r    <= zwischen_gross_temp;
             zwischen_klein_r    <= zwischen_klein_temp;
             alu_c_r             <= alu_c;
-            //start_r             <= start_i;
         end     
     
     end
@@ -102,31 +98,31 @@ module datapath (
             zwischen_gross_temp = wbb;
         end
 
-        else if (wren_zw_klein_i) begin
+        if (wren_zw_klein_i) begin
             zwischen_klein_temp = wbb;
         end
 
-        else if (wren_zw_in_zahlen_i) begin
+        if (wren_zw_in_zahlen_i) begin
             Zahl1_r         = zwischen_gross_r;
             Zahl2_r         = zwischen_klein_r;
             erg_zuvor_temp     = zwischen_klein_r;
         end
 
-        else if (wren_erg_modulo_i) begin
+        if (wren_erg_modulo_i) begin
             erg_modulo_temp = wbb;
         end
 
-        else if (wren_Zahl_i) begin
+        if (wren_Zahl_i) begin
             Zahl1_r = Zahl2_r;
         end
 
-        else if (wren_to_new_numbers_i) begin
+        if (wren_to_new_numbers_i) begin
             
             Zahl2_r = erg_modulo_r;
             erg_zuvor_temp = erg_modulo_r;
 
         end
-        else if (wren_initial_i) begin
+        if (wren_initial_i) begin
             Zahl1_r = Zahl1_temp;
             Zahl2_r = Zahl2_temp;
         end

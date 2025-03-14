@@ -34,7 +34,7 @@ localparam STATE_find_smaller             = 4'd2;
 localparam STATE_write_both               = 4'd3;
 localparam STATE_write_zwischenspeicher   = 4'd4;
 
-localparam STATE_calc                     = 4'd5; //iterative Schritte des Algorithmus
+localparam STATE_calc                     = 4'd5; 
 localparam STATE_write_erg                = 4'd6;
 localparam STATE_check_if_zero            = 4'd7;
 localparam STATE_write_Zahl               = 4'd8;

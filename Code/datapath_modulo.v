@@ -60,10 +60,8 @@ always @(posedge clk) begin
     if (rst_i) begin
         Zahl1_temp          <= 'd0;
         Zahl2_temp          <= 'd0;
-        //Zahl1_r             <= 'd0;
-        //Zahl2_r             <= 'd0;
-
-        //ergebnis_r          <= 'd0;
+        
+        ergebnis_r          <= 'd0;
         termination_erg_r   <= 'd0;
     end else begin
         Zahl1_temp          <= Zahl1_i;
@@ -73,7 +71,6 @@ always @(posedge clk) begin
         termination_erg_r   <= termination_erg_temp;
 
         alu_c_r             <= alu_c;
-        //start_r             <= start_i;
     end
 end
 
@@ -94,15 +91,15 @@ always @(*) begin
         Zahl2_r = Zahl2_temp;
     end
 
-    else if (wren_Zahl1_to_erg) begin
+    if (wren_Zahl1_to_erg) begin
         ergebnis_temp = Zahl1_r;
     end
 
-    else if (wren_term_erg) begin
+    if (wren_term_erg) begin
         termination_erg_temp = wbb[0];
     end
 
-    else if (wren_res_to_erg) begin
+    if (wren_res_to_erg) begin
         ergebnis_temp = wbb;
     end
 

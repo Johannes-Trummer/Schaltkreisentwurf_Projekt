@@ -39,7 +39,7 @@ module datapath_modulo (
 
 
 //===Variablenregister======================
-    reg [15:0]  Zahl1_r, Zahl2_r, Zahl1_temp, Zahl2_temp;
+    reg [15:0]  Zahl1_r, Zahl2_r, Zahl1_i_r, Zahl2_i_r, Zahl1_temp, Zahl2_temp;
     reg [15:0]  ergebnis_r, ergebnis_temp;
     reg         termination_erg_temp, termination_erg_r;
 	 //reg 				start_r;
@@ -58,19 +58,25 @@ alu_modulo alu(
 
 always @(posedge clk) begin
     if (rst_i) begin
-        Zahl1_temp          <= 'd0;
-        Zahl2_temp          <= 'd0;
-        
+        Zahl1_i_r          <= 'd0;
+        Zahl2_i_r          <= 'd0;
+
         ergebnis_r          <= 'd0;
         termination_erg_r   <= 'd0;
+
+        Zahl1_r             <= 'd0;
+        Zahl2_r             <= 'd0;
     end else begin
-        Zahl1_temp          <= Zahl1_i;
-        Zahl2_temp          <= Zahl2_i;
+        Zahl1_i_r          <= Zahl1_i;
+        Zahl2_i_r          <= Zahl2_i;
 
         ergebnis_r          <= ergebnis_temp;
         termination_erg_r   <= termination_erg_temp;
 
         alu_c_r             <= alu_c;
+
+        Zahl1_r             <= Zahl1_temp;
+        Zahl2_r             <= Zahl2_temp;
     end
 end
 
@@ -87,8 +93,8 @@ always @(*) begin
 
     //===Write-Back-Flags===
     if (wren_update_Zahlen) begin
-        Zahl1_r = Zahl1_temp;
-        Zahl2_r = Zahl2_temp;
+        Zahl1_temp = Zahl1_i_r;
+        Zahl2_temp = Zahl2_i_r;
     end
 
     if (wren_Zahl1_to_erg) begin

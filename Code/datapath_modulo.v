@@ -9,21 +9,21 @@ module datapath_modulo (
     input   [2:0]   alu_mode_i,
 
     //===Write-Back-Flags===
-    input wren_Zahl1_to_erg,
-    input wren_res_to_erg,
-    input wren_term_erg,
+    input wren_Zahl1_to_erg_i,
+    input wren_res_to_erg_i,
+    input wren_term_erg_i,
 
-    input wren_update_Zahlen,
+    input wren_update_Zahlen_i,
 
 
 
     //===Register-Transfer===
-    input erg_to_alu_a, 
-    input Zahl2_to_alu_b,
+    input erg_to_alu_a_i, 
+    input Zahl2_to_alu_b_i,
 
 
     input check_for_termination_i,
-    output wire [15:0]   ergebnis,
+    output wire [15:0]   ergebnis_o,
     output wire          valid_o
 );
 
@@ -93,30 +93,30 @@ always @(*) begin
         Zahl2_temp = Zahl2_r;
         
     //===Write-Back-Flags===
-    if (wren_update_Zahlen) begin
+    if (wren_update_Zahlen_i) begin
         Zahl1_temp = Zahl1_i_r;
         Zahl2_temp = Zahl2_i_r;
     end
 
-    if (wren_Zahl1_to_erg) begin
+    if (wren_Zahl1_to_erg_i) begin
         ergebnis_temp = Zahl1_r;
     end
 
-    if (wren_term_erg) begin
+    if (wren_term_erg_i) begin
         termination_erg_temp = wbb[0];
     end
 
-    if (wren_res_to_erg) begin
+    if (wren_res_to_erg_i) begin
         ergebnis_temp = wbb;
     end
 
     //===Register-Transfer==============
 
-    if (erg_to_alu_a) begin
+    if (erg_to_alu_a_i) begin
         alu_a_temp = ergebnis_r;
     end
 
-    if (Zahl2_to_alu_b) begin
+    if (Zahl2_to_alu_b_i) begin
         alu_b_temp = Zahl2_r;
     end
 
@@ -124,6 +124,6 @@ end
 
 assign wbb      = alu_c_r;
 assign valid_o  = check_for_termination_i & (termination_erg_r);
-assign ergebnis = ergebnis_r;
+assign ergebnis_o = ergebnis_r;
     
 endmodule

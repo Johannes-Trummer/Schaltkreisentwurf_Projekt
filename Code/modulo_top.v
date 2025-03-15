@@ -48,18 +48,18 @@ datapath_modulo datapath(
     .Zahl2_i(Zahl2_i),
     .alu_mode_i(alu_mode),
 
-    .wren_Zahl1_to_erg(wren_Zahl2_to_erg),
-    .wren_res_to_erg(wren_res_to_erg),
-    .wren_term_erg(wren_term_erg),
+    .wren_Zahl1_to_erg_i(wren_Zahl2_to_erg),
+    .wren_res_to_erg_i(wren_res_to_erg),
+    .wren_term_erg_i(wren_term_erg),
 
-    .wren_update_Zahlen(wren_update_Zahlen),
+    .wren_update_Zahlen_i(wren_update_Zahlen),
    
 
-    .erg_to_alu_a(erg_to_alu_a), 
-    .Zahl2_to_alu_b(Zahl2_to_alu_b),
+    .erg_to_alu_a_i(erg_to_alu_a), 
+    .Zahl2_to_alu_b_i(Zahl2_to_alu_b),
 
     .check_for_termination_i(check_for_termination),
-    .ergebnis(zwischen_ergebnis),
+    .ergebnis_o(zwischen_ergebnis),
     .valid_o(zwischen_valid)
 );
 

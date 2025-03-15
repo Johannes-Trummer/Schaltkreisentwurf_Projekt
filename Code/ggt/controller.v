@@ -57,16 +57,12 @@ reg                 start_r;
 
 always @(posedge clk) begin
     if (rst_i) begin
-        //valid_r         <= 1'd0;
         start_r         <= 1'd0;
         current_state   <= STATE_IDLE;
-        //modulo_ready_r  <= 1'd0;
     end
     else begin
-        //valid_r         <= valid_i;
         start_r         <= start_i;
         current_state   <= next_state;
-        //modulo_ready_r  <= modulo_ready_i;
     end
 end
 

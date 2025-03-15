@@ -8,8 +8,8 @@ module testbench(
 	 
 );
 
-    reg [15:0] Zahl1 = 16'd180;
-    reg [15:0] Zahl2 = 16'd180;
+    reg [15:0] Zahl1 = 16'd685;
+    reg [15:0] Zahl2 = 16'd744;
     wire [15:0] ergebnis;
     reg start = 'd0;
     reg rst = 'd0;

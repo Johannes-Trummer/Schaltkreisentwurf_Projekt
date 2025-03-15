@@ -14,7 +14,7 @@ module testbench_modulo (
 
     modulo_top modulo_top(
 
-    	.rst(rst), 
+    	.rst_i(rst), 
         .clk(clk), 
         .start_i(start_i),
     	.Zahl1_i(Zahl1), 
@@ -26,7 +26,8 @@ module testbench_modulo (
     initial begin
         #5  start_i = 1'd1;
             rst     = 1'd1;
-        #2  rst     = 1'd0;    
+        #2  rst     = 1'd0;  
+        #10 start_i = 1'd0;  
     	
     end
 

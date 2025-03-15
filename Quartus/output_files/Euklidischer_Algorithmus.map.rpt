@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Euklidischer_Algorithmus
-Sat Mar 15 10:55:38 2025
+Sat Mar 15 14:51:31 2025
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 15 10:55:38 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 15 14:51:31 2025       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; Euklidischer_Algorithmus                    ;
 ; Top-level Entity Name              ; testbench                                   ;
@@ -365,20 +365,23 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------+----------------------------------------+
 ; Register name                                                                                        ; Reason for Removal                     ;
 +------------------------------------------------------------------------------------------------------+----------------------------------------+
-; ggt_top:TOP|datapath:datapath|Zahl2_i_r[0,1]                                                         ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_i_r[2]                                                           ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_i_r[3]                                                           ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_i_r[4,5]                                                         ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_i_r[6]                                                           ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_i_r[7]                                                           ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl2_i_r[8..15]                                                       ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_i_r[0]                                                           ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_i_r[1]                                                           ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_i_r[2]                                                           ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_i_r[3,4]                                                         ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_i_r[5]                                                           ; Stuck at GND due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_i_r[6]                                                           ; Stuck at VCC due to stuck port data_in ;
-; ggt_top:TOP|datapath:datapath|Zahl1_i_r[7..15]                                                       ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[0..2]                                                        ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[3]                                                           ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[4]                                                           ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[5..7]                                                        ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[8]                                                           ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[9]                                                           ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl2_i_r[10..15]                                                      ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[0]                                                           ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[1]                                                           ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[2,3]                                                         ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[4]                                                           ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[5]                                                           ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[6]                                                           ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[7]                                                           ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[8]                                                           ; Stuck at GND due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[9]                                                           ; Stuck at VCC due to stuck port data_in ;
+; ggt_top:TOP|datapath:datapath|Zahl1_i_r[10..15]                                                      ; Stuck at GND due to stuck port data_in ;
 ; ggt_top:TOP|controller:controller|start_r                                                            ; Stuck at VCC due to stuck port data_in ;
 ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~2 ; Lost fanout                            ;
 ; ggt_top:TOP|datapath:datapath|alu:alu|modulo_top:modulo|controller_modulo:controller|current_state~3 ; Lost fanout                            ;
@@ -398,8 +401,8 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 363   ;
-; Number of registers using Synchronous Clear  ; 41    ;
-; Number of registers using Synchronous Load   ; 26    ;
+; Number of registers using Synchronous Clear  ; 38    ;
+; Number of registers using Synchronous Load   ; 29    ;
 ; Number of registers using Asynchronous Clear ; 55    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 242   ;
@@ -918,28 +921,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+---------------------------------------+
 
 
-+--------------------------------------------------+
-; Port Connectivity Checks: "ggt_top:TOP"          ;
-+----------------+-------+----------+--------------+
-; Port           ; Type  ; Severity ; Details      ;
-+----------------+-------+----------+--------------+
-; rst_i          ; Input ; Info     ; Stuck at GND ;
-; start_i        ; Input ; Info     ; Stuck at VCC ;
-; Zahl1_i[4..3]  ; Input ; Info     ; Stuck at VCC ;
-; Zahl1_i[15..7] ; Input ; Info     ; Stuck at GND ;
-; Zahl1_i[6]     ; Input ; Info     ; Stuck at VCC ;
-; Zahl1_i[5]     ; Input ; Info     ; Stuck at GND ;
-; Zahl1_i[2]     ; Input ; Info     ; Stuck at GND ;
-; Zahl1_i[1]     ; Input ; Info     ; Stuck at VCC ;
-; Zahl1_i[0]     ; Input ; Info     ; Stuck at GND ;
-; Zahl2_i[5..4]  ; Input ; Info     ; Stuck at VCC ;
-; Zahl2_i[15..8] ; Input ; Info     ; Stuck at GND ;
-; Zahl2_i[1..0]  ; Input ; Info     ; Stuck at GND ;
-; Zahl2_i[7]     ; Input ; Info     ; Stuck at VCC ;
-; Zahl2_i[6]     ; Input ; Info     ; Stuck at GND ;
-; Zahl2_i[3]     ; Input ; Info     ; Stuck at GND ;
-; Zahl2_i[2]     ; Input ; Info     ; Stuck at VCC ;
-+----------------+-------+----------+--------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "ggt_top:TOP"           ;
++-----------------+-------+----------+--------------+
+; Port            ; Type  ; Severity ; Details      ;
++-----------------+-------+----------+--------------+
+; rst_i           ; Input ; Info     ; Stuck at GND ;
+; start_i         ; Input ; Info     ; Stuck at VCC ;
+; Zahl1_i[3..2]   ; Input ; Info     ; Stuck at VCC ;
+; Zahl1_i[15..10] ; Input ; Info     ; Stuck at GND ;
+; Zahl1_i[9]      ; Input ; Info     ; Stuck at VCC ;
+; Zahl1_i[8]      ; Input ; Info     ; Stuck at GND ;
+; Zahl1_i[7]      ; Input ; Info     ; Stuck at VCC ;
+; Zahl1_i[6]      ; Input ; Info     ; Stuck at GND ;
+; Zahl1_i[5]      ; Input ; Info     ; Stuck at VCC ;
+; Zahl1_i[4]      ; Input ; Info     ; Stuck at GND ;
+; Zahl1_i[1]      ; Input ; Info     ; Stuck at GND ;
+; Zahl1_i[0]      ; Input ; Info     ; Stuck at VCC ;
+; Zahl2_i[7..5]   ; Input ; Info     ; Stuck at VCC ;
+; Zahl2_i[15..10] ; Input ; Info     ; Stuck at GND ;
+; Zahl2_i[2..0]   ; Input ; Info     ; Stuck at GND ;
+; Zahl2_i[9]      ; Input ; Info     ; Stuck at VCC ;
+; Zahl2_i[8]      ; Input ; Info     ; Stuck at GND ;
+; Zahl2_i[4]      ; Input ; Info     ; Stuck at GND ;
+; Zahl2_i[3]      ; Input ; Info     ; Stuck at VCC ;
++-----------------+-------+----------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -973,8 +979,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 132                         ;
 ;     ENA CLR           ; 7                           ;
 ;     ENA CLR SLD       ; 8                           ;
-;     ENA SCLR          ; 29                          ;
-;     ENA SLD           ; 8                           ;
+;     ENA SCLR          ; 26                          ;
+;     ENA SLD           ; 11                          ;
 ;     plain             ; 86                          ;
 ; cycloneiii_lcell_comb ; 329                         ;
 ;     arith             ; 75                          ;
@@ -999,7 +1005,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1009,7 +1015,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Sat Mar 15 10:55:02 2025
+    Info: Processing started: Sat Mar 15 14:51:09 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Euklidischer_Algorithmus -c Euklidischer_Algorithmus
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /users/jotru/desktop/projekt_se/schaltkreisentwurf_projekt/code/testbench.v
@@ -1145,7 +1151,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/logi
     Info (12023): Found entity 1: logic_pll_altpll File: C:/Users/jotru/Desktop/Projekt_SE/Schaltkreisentwurf_Projekt/Quartus/db/logic_pll_altpll.v Line: 30
 Info (12128): Elaborating entity "logic_pll_altpll" for hierarchy "logic_pll:PLL|altpll:altpll_component|logic_pll_altpll:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.03.15.10:55:28 Progress: Loading sld680e4599/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.03.15.14:51:21 Progress: Loading sld680e4599/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1180,9 +1186,9 @@ Info (21057): Implemented 657 device resources after synthesis - the final resou
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4902 megabytes
-    Info: Processing ended: Sat Mar 15 10:55:38 2025
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Sat Mar 15 14:51:31 2025
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:47
 
 

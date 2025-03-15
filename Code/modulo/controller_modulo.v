@@ -1,19 +1,19 @@
 module controller_modulo (
-    input           rst,
+    input           rst_i,
     input           clk,
     input           start_i,
     input           valid_i,
 
     output reg [2:0]    alu_mode_o,
 
-    output reg wren_Zahl1_to_erg,
-    output reg wren_res_to_erg,
-    output reg wren_term_erg,
+    output reg wren_Zahl1_to_erg_o,
+    output reg wren_res_to_erg_o,
+    output reg wren_term_erg_o,
 
-    output reg wren_update_Zahlen,
+    output reg wren_update_Zahlen_o,
 
-    output reg erg_to_alu_a,
-    output reg Zahl2_to_alu_b,
+    output reg erg_to_alu_a_o,
+    output reg Zahl2_to_alu_b_o,
 
     output reg check_for_termination_o
 );
@@ -32,9 +32,9 @@ localparam STATE_IDLE       = 4'd7;
 
 
 //===ALU-Kommandos===
-localparam ALU_compare      = 4'd0;
-localparam ALU_Diff         = 4'd1;
-localparam ALU_IDLE         = 4'd2;
+localparam ALU_compare      = 3'd0;
+localparam ALU_Diff         = 3'd1;
+localparam ALU_IDLE         = 3'd2;
 
 //===Schrittregister============
 reg [3:0] 			current_state, next_state;
@@ -42,7 +42,7 @@ reg                 start_r, valid_r;
 
 
 always @(posedge clk) begin
-    if (rst) begin
+    if (rst_i) begin
         valid_r         <= 1'd0;
         start_r         <= 1'd0;
         current_state   <= STATE_IDLE;
@@ -61,40 +61,40 @@ always @(*) begin
     check_for_termination_o     = 'b0;
 
     //===Write-Back-Flags===
-    wren_Zahl1_to_erg   = 'd0;
-    wren_res_to_erg     = 'd0;
-    wren_term_erg       = 'd0;
+    wren_Zahl1_to_erg_o   = 'd0;
+    wren_res_to_erg_o     = 'd0;
+    wren_term_erg_o       = 'd0;
 
-    wren_update_Zahlen  = 'd0;
+    wren_update_Zahlen_o  = 'd0;
    
     
     //===Register-Transfer===
-    erg_to_alu_a    = 'd0;
-    Zahl2_to_alu_b  = 'd0;
+    erg_to_alu_a_o    = 'd0;
+    Zahl2_to_alu_b_o  = 'd0;
 
     case (current_state)
 
         STATE_IDLE: begin
             
-            if (start_r) begin
+            if (start_r == 1'b1) begin
                 next_state = STATE_update;
             end
         end
 
         STATE_update: begin
             next_state = STATE_write_init;
-            wren_update_Zahlen = 1'd1;
+            wren_update_Zahlen_o = 1'd1;
         end
 
         STATE_write_init: begin
             next_state = STATE_compare;
-            wren_Zahl1_to_erg = 1'd1;
+            wren_Zahl1_to_erg_o = 1'd1;
         end
 
 
         STATE_compare: begin
-            erg_to_alu_a    = 1'd1;
-            Zahl2_to_alu_b  = 1'd1;
+            erg_to_alu_a_o    = 1'd1;
+            Zahl2_to_alu_b_o  = 1'd1;
 
             next_state = STATE_write_comp;
             alu_mode_o = ALU_compare;
@@ -102,7 +102,7 @@ always @(*) begin
 
         STATE_write_comp: begin
             next_state = STATE_check_term;
-            wren_term_erg = 1'd1;
+            wren_term_erg_o = 1'd1;
 
         end
 
@@ -115,14 +115,14 @@ always @(*) begin
         STATE_diff: begin
             next_state = STATE_write;
 
-            erg_to_alu_a    = 1'd1;
-            Zahl2_to_alu_b  = 1'd1;
+            erg_to_alu_a_o    = 1'd1;
+            Zahl2_to_alu_b_o  = 1'd1;
             alu_mode_o = ALU_Diff;
         end
 
         STATE_write: begin
             next_state = STATE_compare;
-            wren_res_to_erg = 1'd1;
+            wren_res_to_erg_o = 1'd1;
         end
 
 

@@ -5,6 +5,7 @@
 `ifndef SIMULATION
 module testbench(
     input clk
+	 
 );
 
     reg [15:0] Zahl1 = 16'd685;
@@ -15,6 +16,7 @@ module testbench(
     wire valid;
 	 wire logic_clk;
 	 wire egal;
+	 
 
 	 
 	reg    [15:0] counter_r;
@@ -50,6 +52,7 @@ module testbench(
 		.c0(logic_clk)
 	 
 	 ); 
+	 
 	 
 	always @ (posedge logic_clk) begin 
 		counter_r <= counter_r + 16'd1; 

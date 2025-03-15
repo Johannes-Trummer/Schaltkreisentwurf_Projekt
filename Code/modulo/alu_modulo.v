@@ -10,9 +10,9 @@ module alu_modulo (
 
 
 //===ALU-Kommandos===
-    localparam ALU_compare      = 4'd0;
-    localparam ALU_Diff         = 4'd1;
-    localparam ALU_IDLE         = 4'd2;
+    localparam ALU_compare      = 3'd0;
+    localparam ALU_Diff         = 3'd1;
+    localparam ALU_IDLE         = 3'd2;
 
     always @(*) begin
         
@@ -21,10 +21,10 @@ module alu_modulo (
 
             ALU_compare: begin
                 if (op_a_i >= op_b_i) begin
-                    res_o = 1'b0;
+                    res_o = 16'b0;
                 end
                 else begin
-                    res_o = 1'b1;
+                    res_o = 16'b1;
                 end
             end
 
